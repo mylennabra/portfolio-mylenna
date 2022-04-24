@@ -6,6 +6,7 @@
 
 @mixin flex-page{
     @include center-flex();
+    justify-content: space-between;
     flex-direction: column;
     height: 100vh;
     box-sizing: border-box;
