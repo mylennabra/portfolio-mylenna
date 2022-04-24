@@ -14,24 +14,24 @@ html {
   font-weight: bold;
 }
 
-.title, .text-container > h1, .scnd-title, .sobre-mim .text-container > h1 {
+.title, .contatos .text-container > h1, .minhas-espc .text-container > h1, .text-container > h1, .scnd-title, .meus-projetos .text-container > h1, .sobre-mim .text-container > h1 {
   color: #9F2E9D;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 3vh;
 }
 
-.scnd-title, .sobre-mim .text-container > h1 {
+.scnd-title, .meus-projetos .text-container > h1, .sobre-mim .text-container > h1 {
   color: #ffffff;
 }
 
-.text, .text-container > h3, .scnd-text, .sobre-mim .text-container > h3 {
+.text, .contatos .text-container > h3, .minhas-espc .text-container > h3, .text-container > h3, .scnd-text, .meus-projetos .text-container > h3, .sobre-mim .text-container > h3 {
   color: #4E5766;
   font-size: 16px;
   font-weight: regular;
 }
 
-.scnd-text, .sobre-mim .text-container > h3 {
+.scnd-text, .meus-projetos .text-container > h3, .sobre-mim .text-container > h3 {
   color: #ffffff;
 }
 
@@ -57,6 +57,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
@@ -70,7 +71,7 @@ html {
 }
 .home-icon-container .home-icon {
   position: relative;
-  margin-top: -10vh;
+  padding-top: 15vh;
   max-width: 150px;
 }
 
@@ -109,16 +110,24 @@ html {
   height: 30px;
 }
 
-.down-btn {
+.down-btn-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  align-items: flex-start;
+  background-color: #9F2E9D;
+  width: 100%;
+  height: 20vh;
   margin-top: 5vh;
+  border-radius: 50px 50px 0 0;
 }
-.down-btn .down-arrow-icon {
-  max-width: 50px;
-  color: black;
+.down-btn-container .down-btn {
+  height: 150px;
+  position: relative;
+  max-width: 150px;
+}
+.down-btn-container .down-btn path {
+  fill: #FFFFFF;
 }
 
 .sobre-mim {
@@ -126,9 +135,82 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+}
+.sobre-mim .text-container {
+  margin: auto 0;
+}
+.sobre-mim .down-btn-container {
+  background-color: #FFF5FF;
+}
+.sobre-mim .down-btn-container .down-btn path {
+  fill: #9F2E9D;
+}
+
+.minhas-espc {
+  background-color: #FFF5FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.minhas-espc .text-container {
+  margin: auto 0;
+}
+.minhas-espc .down-btn-container {
+  background-color: #9F2E9D;
+}
+.minhas-espc .down-btn-container .down-btn path {
+  fill: #FFF5FF;
+}
+
+.meus-projetos {
+  background-color: #9F2E9D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  height: 200vh;
+}
+.meus-projetos .text-container {
+  margin: auto 0;
+}
+.meus-projetos .down-btn-container {
+  background-color: #FFF5FF;
+}
+.meus-projetos .down-btn-container .down-btn path {
+  fill: #9F2E9D;
+}
+
+.contatos {
+  background-color: #FFF5FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.contatos .text-container {
+  margin: auto 0;
+}
+.contatos .down-btn-container {
+  display: grid;
+  place-items: center;
+  max-height: 5vh;
+}
+.contatos .down-btn-container > h3 {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
