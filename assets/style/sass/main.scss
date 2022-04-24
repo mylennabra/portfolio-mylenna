@@ -1,0 +1,143 @@
+@use '../sass/util/util' as *;
+@use '../sass/util/variables' as c;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 600vh !important;
+    background-color: c.$bckgnd-clr !important;
+}
+
+.texto{
+    color: c.$title-txt-clr;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight:bold;
+}
+
+.title{
+    color: c.$title-txt-clr;
+    font-size:32px;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+
+.scnd-title{
+    color: c.$scnd-title-txt-clr;
+    @extend .title;
+}
+
+.text{
+    color: c.$normal-txt-clr;
+    font-size:16px;
+    font-weight: regular;
+}
+
+.scnd-text{
+    color: c.$scnd-normal-txt-clr;
+    @extend .text;
+}
+
+.btn{
+    background-color: c.$primary-clr;
+    border: none;
+    color: c.$scnd-bckgnd-clr;
+    border-radius: 100%;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.navbar-brand{
+    background-color: c.$primary-clr;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0px 0px 5px 0px c.$primary-clr;
+    border-bottom: solid lighten(c.$primary-clr, 30%) 3px;
+}
+
+.home{
+    @include flex-page();
+}
+
+.home-icon-container{
+    width: 100%;
+    @include center-flex();
+
+    .home-icon{
+        position: relative;
+        margin-top: -10vh;
+        max-width: 150px;
+    }
+}
+
+.text-container{
+    max-width: 80%;
+    margin-top: 5vh;
+    text-align: center;
+    @extend .texto;
+    
+    & > h1{
+        @extend .title;
+        &::after{
+            content: "";
+            display: block;
+            width: 50%;
+            height: 2px;
+            margin: 0 auto;
+            background-color: lighten(c.$primary-clr, 30%);
+        }
+    }
+    & > h3{
+        @extend .text;
+    }
+}
+
+.contact-container{
+    @include center-flex();
+    width: 60%;
+    margin-top: 5vh;
+    justify-content:space-around;
+    .contact{
+        background-color: #4E5766;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        @include center-flex();
+
+        &-icon{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.down-btn{
+    @include center-flex();
+    width: 60%;
+    margin-top: 5vh;
+    .down-arrow-icon{
+        max-width: 50px;
+        color: black;
+    }
+}
+
+.sobre-mim{
+    background-color: c.$primary-clr;
+    @include flex-page();
+
+    &::before{
+        
+    }
+
+    .text-container > h1{
+       @extend .scnd-title; 
+    }
+
+    .text-container > h3{
+        @extend .scnd-text; 
+     }
+
+}

@@ -1,0 +1,18 @@
+@mixin center-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-page{
+    @include center-flex();
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+@mixin center-grid{
+    display: grid;
+    place-items: center;
+}
+

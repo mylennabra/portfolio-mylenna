@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 600vh !important;
+  background-color: #FFF5FF !important;
+}
+
+.texto, .text-container {
+  color: #9F2E9D;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+
+.title, .text-container > h1, .scnd-title, .sobre-mim .text-container > h1 {
+  color: #9F2E9D;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 3vh;
+}
+
+.scnd-title, .sobre-mim .text-container > h1 {
+  color: #ffffff;
+}
+
+.text, .text-container > h3, .scnd-text, .sobre-mim .text-container > h3 {
+  color: #4E5766;
+  font-size: 16px;
+  font-weight: regular;
+}
+
+.scnd-text, .sobre-mim .text-container > h3 {
+  color: #ffffff;
+}
+
+.btn {
+  background-color: #9F2E9D;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 100%;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.navbar-brand {
+  background-color: #9F2E9D;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 0px 0px 5px 0px #9F2E9D;
+  border-bottom: solid #dd89db 3px;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.home-icon-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-icon-container .home-icon {
+  position: relative;
+  margin-top: -10vh;
+  max-width: 150px;
+}
+
+.text-container {
+  max-width: 80%;
+  margin-top: 5vh;
+  text-align: center;
+}
+.text-container > h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #dd89db;
+}
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin-top: 5vh;
+  justify-content: space-around;
+}
+.contact-container .contact {
+  background-color: #4E5766;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-container .contact-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.down-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin-top: 5vh;
+}
+.down-btn .down-arrow-icon {
+  max-width: 50px;
+  color: black;
+}
+
+.sobre-mim {
+  background-color: #9F2E9D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=main.css.map */
