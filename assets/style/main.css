@@ -141,7 +141,7 @@ html {
   box-sizing: border-box;
 }
 .sobre-mim .text-container {
-  margin: auto 0;
+  margin: 0 auto;
 }
 .sobre-mim .down-btn-container {
   background-color: #FFF5FF;
@@ -162,6 +162,26 @@ html {
 }
 .minhas-espc .text-container {
   margin: auto 0;
+}
+.minhas-espc--container {
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 60%;
+  align-items: flex-start;
+  justify-content: space-between;
+  grid-template-columns: 50px 50px;
+}
+.minhas-espc--block {
+  display: grid;
+  place-items: center;
+  background-color: #4E5766;
+  border-radius: 15%;
+  width: 6em;
+  height: 6em;
+}
+.minhas-espc .esp-icon {
+  width: 80%;
 }
 .minhas-espc .down-btn-container {
   background-color: #9F2E9D;
