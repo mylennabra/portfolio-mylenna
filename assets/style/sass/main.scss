@@ -68,7 +68,7 @@ html{
 
     .home-icon{
         position: relative;
-        padding-top: 15vh;
+        padding-top: 5vh;
         max-width: 150px;
     }
 }
@@ -90,6 +90,12 @@ html{
             background-color: lighten(c.$primary-clr, 30%);
         }
     }
+
+    & > h2{
+        @extend .text;
+        font-size: 24px;
+    }
+
     & > h3{
         @extend .text;
     }
@@ -179,7 +185,14 @@ html{
     }
 
     &--block {
-        @include center-grid();
+        & > h3{
+            @extend .scnd-text;
+        }
+        @include center-flex();
+        justify-content:flex-start;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        flex-direction: column;
         background-color: #4E5766;
         border-radius: 15%;
         width: 6em;
@@ -187,7 +200,8 @@ html{
     }
 
     .esp-icon{
-        width: 80%;
+        margin-top: 5px;
+        width: 50%;
     }
 
     .down-btn-container{
@@ -228,7 +242,7 @@ html{
     background-color: c.$bckgnd-clr;
     @include flex-page();
     .text-container{
-        margin: auto 0;
+        margin: 0 auto;
         & > h1{
            @extend .title; 
         }
@@ -241,6 +255,52 @@ html{
         max-height: 5vh;
         & > h3{
             font-size:12px;
+        }
+    }
+
+    .form-container{
+        background-color: c.$bckgnd-clr;
+        border: solid 2px c.$primary-clr;
+        border-radius:50px;
+        height: 40vh;
+        width: 70vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        & > .text-container{
+            margin: 0;
+            height: 8vh;
+            min-width: 100%;
+            @include center-grid();
+            background-color: c.$primary-clr; 
+            border-radius:48px 48px 0 0;
+
+            & > h2{
+                color: c.$scnd-normal-txt-clr;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+        }
+
+        & > .form-field-container{
+            padding-top: 2vh;
+            max-width: 80%;
+            & > h2{
+                color: c.$normal-txt-clr;
+                font-size: 20px;
+            }
+
+            .input{
+                border: 1px solid c.$primary-clr; 
+
+                &:last-child{
+                    height: 12vh;
+                }
+            }
+            
         }
     }
 }

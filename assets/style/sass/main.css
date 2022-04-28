@@ -25,13 +25,13 @@ html {
   color: #ffffff;
 }
 
-.text, .contatos .text-container > h3, .minhas-espc .text-container > h3, .text-container > h3, .scnd-text, .meus-projetos .text-container > h3, .sobre-mim .text-container > h3 {
+.text, .contatos .text-container > h3, .minhas-espc .text-container > h3, .text-container > h3, .text-container > h2, .scnd-text, .meus-projetos .text-container > h3, .minhas-espc--block > h3, .sobre-mim .text-container > h3 {
   color: #4E5766;
   font-size: 16px;
   font-weight: regular;
 }
 
-.scnd-text, .meus-projetos .text-container > h3, .sobre-mim .text-container > h3 {
+.scnd-text, .meus-projetos .text-container > h3, .minhas-espc--block > h3, .sobre-mim .text-container > h3 {
   color: #ffffff;
 }
 
@@ -61,6 +61,7 @@ html {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+  padding-top: 7rem;
 }
 
 .home-icon-container {
@@ -71,7 +72,7 @@ html {
 }
 .home-icon-container .home-icon {
   position: relative;
-  padding-top: 15vh;
+  padding-top: 5vh;
   max-width: 150px;
 }
 
@@ -87,6 +88,9 @@ html {
   height: 2px;
   margin: 0 auto;
   background-color: #dd89db;
+}
+.text-container > h2 {
+  font-size: 24px;
 }
 .contact-container {
   display: flex;
@@ -139,9 +143,10 @@ html {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+  padding-top: 7rem;
 }
 .sobre-mim .text-container {
-  margin: auto 0;
+  margin: 0 auto;
 }
 .sobre-mim .down-btn-container {
   background-color: #FFF5FF;
@@ -159,9 +164,36 @@ html {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+  padding-top: 7rem;
 }
 .minhas-espc .text-container {
   margin: auto 0;
+}
+.minhas-espc--container {
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 60%;
+  align-items: flex-start;
+  justify-content: space-between;
+  grid-template-columns: 50px 50px;
+}
+.minhas-espc--block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  flex-direction: column;
+  background-color: #4E5766;
+  border-radius: 15%;
+  width: 6em;
+  height: 6em;
+}
+.minhas-espc .esp-icon {
+  margin-top: 5px;
+  width: 50%;
 }
 .minhas-espc .down-btn-container {
   background-color: #9F2E9D;
@@ -179,6 +211,7 @@ html {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+  padding-top: 7rem;
   height: 200vh;
 }
 .meus-projetos .text-container {
@@ -200,14 +233,56 @@ html {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+  padding-top: 7rem;
 }
 .contatos .text-container {
-  margin: auto 0;
+  margin: 0 auto;
 }
 .contatos .down-btn-container {
+  display: grid;
+  place-items: center;
   max-height: 5vh;
 }
 .contatos .down-btn-container > h3 {
   font-size: 12px;
+}
+.contatos .form-container {
+  background-color: #FFF5FF;
+  border: solid 2px #9F2E9D;
+  border-radius: 50px;
+  height: 40vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contatos .form-container > .text-container {
+  margin: 0;
+  height: 8vh;
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #9F2E9D;
+  border-radius: 48px 48px 0 0;
+}
+.contatos .form-container > .text-container > h2 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.contatos .form-container > .form-field-container {
+  padding-top: 2vh;
+  max-width: 80%;
+}
+.contatos .form-container > .form-field-container > h2 {
+  color: #4E5766;
+  font-size: 20px;
+}
+.contatos .form-container > .form-field-container .input {
+  border: 1px solid #9F2E9D;
+}
+.contatos .form-container > .form-field-container .input:last-child {
+  height: 12vh;
 }
 /*# sourceMappingURL=main.css.map */
