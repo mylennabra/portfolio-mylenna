@@ -50,29 +50,6 @@ html{
     }
 }
 
-.navbar-brand{
-    background-color: c.$primary-clr;
-    justify-content: space-between;
-    width: 100%;
-    box-shadow: 0px 0px 5px 0px c.$primary-clr;
-    border-bottom: solid lighten(c.$primary-clr, 30%) 3px;
-}
-
-.home{
-    @include flex-page();
-}
-
-.home-icon-container{
-    width: 100%;
-    @include center-flex();
-
-    .home-icon{
-        position: relative;
-        padding-top: 5vh;
-        max-width: 150px;
-    }
-}
-
 .text-container{
     max-width: 80%;
     margin-top: 5vh;
@@ -87,36 +64,17 @@ html{
             width: 50%;
             height: 2px;
             margin: 0 auto;
-            background-color: lighten(c.$primary-clr, 30%);
+            background-color: c.$thrd-clr;
         }
     }
-
+    
     & > h2{
         @extend .text;
         font-size: 24px;
     }
-
+    
     & > h3{
         @extend .text;
-    }
-}
-
-.contact-container{
-    @include center-flex();
-    width: 60%;
-    margin-top: 5vh;
-    justify-content:space-around;
-    .contact{
-        background-color: #4E5766;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        @include center-flex();
-
-        &-icon{
-            width: 30px;
-            height: 30px;
-        }
     }
 }
 
@@ -130,7 +88,7 @@ html{
     border-radius: 50px 50px 0 0;
     .down-btn{
         path{
-            fill:c.$scnd-bckgnd-clr;
+            fill: c.$thrd-clr;
         }
         height: 150px;
         position: relative;
@@ -138,24 +96,66 @@ html{
     }
 }
 
+.navbar-brand{
+    background-color: c.$primary-clr;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: solid darken(c.$primary-clr, 10%) 3px;
+}
+
+.home{
+    @include flex-page();
+    
+    .home-icon-container{
+        width: 100%;
+        @include center-flex();
+        
+        .home-icon{
+            position: relative;
+            padding-top: 5vh;
+            max-width: 150px;
+        }
+    }
+    
+}
+
+.contact-container{
+    @include center-flex();
+    width: 60%;
+    margin-top: 5vh;
+    justify-content:space-around;
+    .contact{
+        background-color: c.$scnd-clr;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        @include center-flex();
+        
+        &-icon{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
 .sobre-mim{
     background-color: c.$primary-clr;
     @include flex-page();
-
+    
     .text-container{
         margin: 0 auto;
         & > h1{
-           @extend .scnd-title; 
+            @extend .scnd-title; 
         }
         & > h3{
             @extend .scnd-text; 
-         }
+        }
     }
     .down-btn-container{
         background-color:  c.$bckgnd-clr;
         .down-btn{
             path{
-                fill: c.$primary-clr;            
+                fill: c.$thrd-clr;            
             }
         }
     }
@@ -193,7 +193,7 @@ html{
         padding-top: 1vh;
         padding-bottom: 1vh;
         flex-direction: column;
-        background-color: #4E5766;
+        background-color: c.$scnd-clr;
         border-radius: 15%;
         width: 6em;
         height: 6em;
@@ -208,7 +208,7 @@ html{
         background-color: c.$primary-clr;
         .down-btn{
             path{
-                fill: c.$bckgnd-clr;            
+                fill: c.$thrd-clr;            
             }
         }
     }
@@ -220,7 +220,7 @@ html{
     height: 200vh;
 
     .text-container{
-        margin: auto 0;
+        margin: 0 auto;
         & > h1{
            @extend .scnd-title; 
         }
@@ -228,23 +228,46 @@ html{
             @extend .scnd-text; 
          }
     }
+    
+    .projetos-container{
+        display: grid;
+        margin-top: 0;
+        padding-top: 0;
+        height: 180vh;
+    }
+
+    .site-img{
+        border-radius: 50px 50px 0 ;
+        height: 20vh;
+    }
+
+
     .down-btn-container{
         background-color: c.$bckgnd-clr;
         .down-btn{
             path{
-                fill: c.$primary-clr;            
+                fill: c.$thrd-clr;            
             }
         }
     }
 }
 
+.projetos-block{
+    @include flex-page();
+    justify-content:flex-start;
+    max-height: 20vh;
+    margin-bottom:10px;
+}
+
 .contatos{
     background-color: c.$bckgnd-clr;
     @include flex-page();
+    width: 100%;
     .text-container{
         margin: 0 auto;
         & > h1{
-           @extend .title; 
+           @extend .title;
+           color: c.$title-txt-clr;
         }
         & > h3{
             @extend .text; 
@@ -294,7 +317,12 @@ html{
             }
 
             .input{
-                border: 1px solid c.$primary-clr; 
+                border: 1px solid c.$scnd-clr; 
+                
+                &:hover{
+                    border: 1px solid lighten(c.$scnd-clr, 10%); 
+                }
+                background-color: c.$scnd-clr;
 
                 &:last-child{
                     height: 12vh;

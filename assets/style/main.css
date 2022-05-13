@@ -5,17 +5,17 @@
 
 html {
   height: 600vh !important;
-  background-color: #FFF5FF !important;
+  background-color: #0d000d !important;
 }
 
 .texto, .text-container {
-  color: #9F2E9D;
+  color: #ffffff;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
 
 .title, .contatos .text-container > h1, .minhas-espc .text-container > h1, .text-container > h1, .scnd-title, .meus-projetos .text-container > h1, .sobre-mim .text-container > h1 {
-  color: #9F2E9D;
+  color: #ffffff;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 3vh;
@@ -26,7 +26,7 @@ html {
 }
 
 .text, .contatos .text-container > h3, .minhas-espc .text-container > h3, .text-container > h3, .text-container > h2, .scnd-text, .meus-projetos .text-container > h3, .minhas-espc--block > h3, .sobre-mim .text-container > h3 {
-  color: #4E5766;
+  color: #ffffff;
   font-size: 16px;
   font-weight: regular;
 }
@@ -36,44 +36,13 @@ html {
 }
 
 .btn {
-  background-color: #9F2E9D;
+  background-color: #160016;
   border: none;
   color: #FFFFFF;
   border-radius: 100%;
 }
 .btn:hover {
   cursor: pointer;
-}
-
-.navbar-brand {
-  background-color: #9F2E9D;
-  justify-content: space-between;
-  width: 100%;
-  box-shadow: 0px 0px 5px 0px #9F2E9D;
-  border-bottom: solid #dd89db 3px;
-}
-
-.home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100vh;
-  box-sizing: border-box;
-  padding-top: 7rem;
-}
-
-.home-icon-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home-icon-container .home-icon {
-  position: relative;
-  padding-top: 5vh;
-  max-width: 150px;
 }
 
 .text-container {
@@ -87,11 +56,60 @@ html {
   width: 50%;
   height: 2px;
   margin: 0 auto;
-  background-color: #dd89db;
+  background-color: #be1ec7;
 }
 .text-container > h2 {
   font-size: 24px;
 }
+.down-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #160016;
+  width: 100%;
+  height: 20vh;
+  margin-top: 5vh;
+  border-radius: 50px 50px 0 0;
+}
+.down-btn-container .down-btn {
+  height: 150px;
+  position: relative;
+  max-width: 150px;
+}
+.down-btn-container .down-btn path {
+  fill: #be1ec7;
+}
+
+.navbar-brand {
+  background-color: #160016;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: solid black 3px;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 7rem;
+}
+.home .home-icon-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .home-icon-container .home-icon {
+  position: relative;
+  padding-top: 5vh;
+  max-width: 150px;
+}
+
 .contact-container {
   display: flex;
   align-items: center;
@@ -101,7 +119,7 @@ html {
   justify-content: space-around;
 }
 .contact-container .contact {
-  background-color: #4E5766;
+  background-color: #160016;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -114,28 +132,8 @@ html {
   height: 30px;
 }
 
-.down-btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #9F2E9D;
-  width: 100%;
-  height: 20vh;
-  margin-top: 5vh;
-  border-radius: 50px 50px 0 0;
-}
-.down-btn-container .down-btn {
-  height: 150px;
-  position: relative;
-  max-width: 150px;
-}
-.down-btn-container .down-btn path {
-  fill: #FFFFFF;
-}
-
 .sobre-mim {
-  background-color: #9F2E9D;
+  background-color: #160016;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,14 +147,14 @@ html {
   margin: 0 auto;
 }
 .sobre-mim .down-btn-container {
-  background-color: #FFF5FF;
+  background-color: #0d000d;
 }
 .sobre-mim .down-btn-container .down-btn path {
-  fill: #9F2E9D;
+  fill: #be1ec7;
 }
 
 .minhas-espc {
-  background-color: #FFF5FF;
+  background-color: #0d000d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,7 +184,7 @@ html {
   padding-top: 1vh;
   padding-bottom: 1vh;
   flex-direction: column;
-  background-color: #4E5766;
+  background-color: #160016;
   border-radius: 15%;
   width: 6em;
   height: 6em;
@@ -196,14 +194,14 @@ html {
   width: 50%;
 }
 .minhas-espc .down-btn-container {
-  background-color: #9F2E9D;
+  background-color: #160016;
 }
 .minhas-espc .down-btn-container .down-btn path {
-  fill: #FFF5FF;
+  fill: #be1ec7;
 }
 
 .meus-projetos {
-  background-color: #9F2E9D;
+  background-color: #160016;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,17 +213,26 @@ html {
   height: 200vh;
 }
 .meus-projetos .text-container {
-  margin: auto 0;
+  margin: 0 auto;
+}
+.meus-projetos .projetos-container {
+  display: grid;
+  margin-top: 0;
+  padding-top: 0;
+  height: 180vh;
+}
+.meus-projetos .site-img {
+  border-radius: 50px 50px 0;
+  height: 20vh;
 }
 .meus-projetos .down-btn-container {
-  background-color: #FFF5FF;
+  background-color: #0d000d;
 }
 .meus-projetos .down-btn-container .down-btn path {
-  fill: #9F2E9D;
+  fill: #be1ec7;
 }
 
-.contatos {
-  background-color: #FFF5FF;
+.projetos-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,9 +241,28 @@ html {
   height: 100vh;
   box-sizing: border-box;
   padding-top: 7rem;
+  justify-content: flex-start;
+  max-height: 20vh;
+  margin-bottom: 10px;
+}
+
+.contatos {
+  background-color: #0d000d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 7rem;
+  width: 100%;
 }
 .contatos .text-container {
   margin: 0 auto;
+}
+.contatos .text-container > h1 {
+  color: #ffffff;
 }
 .contatos .down-btn-container {
   display: grid;
@@ -247,8 +273,8 @@ html {
   font-size: 12px;
 }
 .contatos .form-container {
-  background-color: #FFF5FF;
-  border: solid 2px #9F2E9D;
+  background-color: #0d000d;
+  border: solid 2px #160016;
   border-radius: 50px;
   height: 40vh;
   width: 70vw;
@@ -263,7 +289,7 @@ html {
   min-width: 100%;
   display: grid;
   place-items: center;
-  background-color: #9F2E9D;
+  background-color: #160016;
   border-radius: 48px 48px 0 0;
 }
 .contatos .form-container > .text-container > h2 {
@@ -276,11 +302,15 @@ html {
   max-width: 80%;
 }
 .contatos .form-container > .form-field-container > h2 {
-  color: #4E5766;
+  color: #ffffff;
   font-size: 20px;
 }
 .contatos .form-container > .form-field-container .input {
-  border: 1px solid #9F2E9D;
+  border: 1px solid #160016;
+  background-color: #160016;
+}
+.contatos .form-container > .form-field-container .input:hover {
+  border: 1px solid #490049;
 }
 .contatos .form-container > .form-field-container .input:last-child {
   height: 12vh;
