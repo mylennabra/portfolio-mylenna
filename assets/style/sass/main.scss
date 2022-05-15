@@ -66,6 +66,20 @@ html{
             height: 2px;
             margin: 0 auto;
             background-color: c.$thrd-clr;
+            animation: after 5s alternate 1;
+            
+
+
+            @keyframes after {
+                from {
+                    transform: scalex(.1);
+                    transform-origin:bottom left;
+                }
+                to {
+                    transform: scalex(1);
+                    transform-origin:bottom left;
+                }
+            }
         }
     }
     
@@ -82,7 +96,7 @@ html{
 .down-btn-container{
     @include center-flex();
     align-items:flex-start;
-    background-color: c.$primary-clr;
+    // background-color: c.$primary-clr;
     width: 100%;
     height: 20vh;
     margin-top:5vh;
@@ -91,9 +105,20 @@ html{
         path{
             fill: c.$thrd-clr;
         }
-        height: 150px;
+        height: 90px;
         position: relative;
-        max-width: 150px;
+        max-width: 90px;
+        animation: bounce 1s alternate infinite;
+
+
+        @keyframes bounce {
+            from {
+                transform: translatey(-10px);
+            }
+            to {
+                transform: translatey(0);
+            }
+        }
     }
 }
 
@@ -167,14 +192,14 @@ html{
             @extend .scnd-text; 
         }
     }
-    .down-btn-container{
-        background-color:  c.$bckgnd-clr;
-        .down-btn{
-            path{
-                fill: c.$thrd-clr;            
-            }
-        }
-    }
+    // .down-btn-container{
+    //      background-color:  c.$bckgnd-clr;
+    //     .down-btn{
+    //         path{
+    //             fill: c.$thrd-clr;            
+    //         }
+    //     }
+    // }
 }
 
 .minhas-espc{
@@ -220,14 +245,14 @@ html{
         width: 50%;
     }
 
-    .down-btn-container{
-        background-color: c.$primary-clr;
-        .down-btn{
-            path{
-                fill: c.$thrd-clr;            
-            }
-        }
-    }
+    // .down-btn-container{
+    //     background-color: c.$primary-clr;
+    //     .down-btn{
+    //         path{
+    //             fill: c.$thrd-clr;            
+    //         }
+    //     }
+    // }
 }
 
 .meus-projetos{
@@ -258,14 +283,14 @@ html{
     }
 
 
-    .down-btn-container{
-        background-color: c.$bckgnd-clr;
-        .down-btn{
-            path{
-                fill: c.$thrd-clr;            
-            }
-        }
-    }
+    // .down-btn-container{
+    //     background-color: c.$bckgnd-clr;
+    //     .down-btn{
+    //         path{
+    //             fill: c.$thrd-clr;            
+    //         }
+    //     }
+    // }
 }
 
 .projetos-block{
@@ -289,13 +314,13 @@ html{
             @extend .text; 
          }
     }
-    .down-btn-container{
-        @include center-grid();
-        max-height: 5vh;
-        & > h3{
-            font-size:12px;
-        }
-    }
+    // .down-btn-container{
+    //     @include center-grid();
+    //     max-height: 5vh;
+    //     & > h3{
+    //         font-size:12px;
+    //     }
+    // }
 
     .form-container{
         background-color: c.$bckgnd-clr;
