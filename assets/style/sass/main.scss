@@ -152,9 +152,10 @@ html{
         @include center-flex();
         
         .home-icon{
+            border-radius: 40%;
             position: relative;
-            padding-top: 5vh;
-            max-width: 150px;
+            width: 200px;
+            height: 200px;
         }
     }
     
@@ -258,47 +259,70 @@ html{
 .meus-projetos{
     background-color: c.$primary-clr;
     @include flex-page();
-    height: 200vh;
+    justify-content:flex-start;
+    box-sizing: border-box;
+    min-height: 200vh;
 
     .text-container{
         margin: 0 auto;
+        margin-bottom: 1vh;
         & > h1{
-           @extend .scnd-title; 
+           @extend .scnd-title;
         }
-        & > h3{
+        & > h2{
+            font-weight: bold;   
+        }
+        & > h3, time{
             @extend .scnd-text; 
-         }
+            font-weight: bold;
+        }
+
+        & > a{
+            color: c.$thrd-clr;
+        }
+    }
+
+    .projetos-container{
+        @include center-grid();
+    }
+
+    .projetos-block{
+        background-color: c.$bckgnd-clr;
+        border: solid 1px c.$thrd-clr;
+        border-radius: 10px;
+        margin-bottom: 1vh;
+        max-width:90%;
+    }
+
+    .img-projeto{
+        //!max-height: 20vh;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .divider{
+        padding: 0;
+        margin: 0;
+        height:1px;
+        background-color: c.$thrd-clr;
+    }
+
+    .saibamais{
+        
+        padding: 1vh;
+
     }
     
-    .projetos-container{
-        display: grid;
-        margin-top: 0;
-        padding-top: 0;
-        height: 180vh;
-    }
-
-    .site-img{
-        border-radius: 50px 50px 0 ;
-        height: 20vh;
-    }
-
-
-    // .down-btn-container{
-    //     background-color: c.$bckgnd-clr;
-    //     .down-btn{
-    //         path{
-    //             fill: c.$thrd-clr;            
-    //         }
-    //     }
+    // .projetos-container{
+    //     display: grid;
+    //     gap: 1;
+    //     margin-top: 0;
+    //     padding-top: 0;
+    //     height: fit-content;
     // }
+
 }
 
-.projetos-block{
-    @include flex-page();
-    justify-content:flex-start;
-    max-height: 20vh;
-    margin-bottom:10px;
-}
 
 .contatos{
     background-color: c.$bckgnd-clr;
