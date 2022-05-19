@@ -162,8 +162,8 @@ html {
 .home .home-icon-container .home-icon {
   border-radius: 40%;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 
 .contact-container {
@@ -183,6 +183,12 @@ html {
   align-items: center;
   justify-content: center;
 }
+.contact-container .contact:hover {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transform: translatey(-4px);
+  background-color: #7c007c;
+}
 .contact-container .contact-icon {
   width: 30px;
   height: 30px;
@@ -199,9 +205,25 @@ html {
   box-sizing: border-box;
   padding-top: 7rem;
 }
+.sobre-mim hr {
+  margin: 15px auto;
+  width: 90%;
+  background-color: #FFFFFF;
+}
 .sobre-mim .text-container {
   margin: 0 auto;
 }
+.sobre-mim .text-container > h2 {
+  font-weight: bold;
+}
+.sobre-mim .text-container .cursos > a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.sobre-mim .down-btn-container {
+  margin-top: 0;
+}
+
 .minhas-espc {
   background-color: #0d000d;
   display: flex;
@@ -238,6 +260,10 @@ html {
   width: 6em;
   height: 6em;
 }
+.minhas-espc--block:hover {
+  background-color: #490049;
+  transition-duration: 0.5s;
+}
 .minhas-espc .esp-icon {
   margin-top: 5px;
   width: 50%;
@@ -255,11 +281,14 @@ html {
   padding-top: 7rem;
   justify-content: flex-start;
   box-sizing: border-box;
-  min-height: 200vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .meus-projetos .text-container {
   margin: 0 auto;
   margin-bottom: 1vh;
+  margin-top: 1vh;
 }
 .meus-projetos .text-container > h2 {
   font-weight: bold;
@@ -267,19 +296,46 @@ html {
 .meus-projetos .text-container > h3, .meus-projetos .text-container time {
   font-weight: bold;
 }
-.meus-projetos .text-container > a {
+.meus-projetos .text-container > p {
   color: #be1ec7;
 }
 .meus-projetos .projetos-container {
   display: grid;
   place-items: center;
+  place-items: start center;
+  margin-top: 2vh;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .meus-projetos .projetos-block {
   background-color: #0d000d;
   border: solid 1px #be1ec7;
   border-radius: 10px;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
   max-width: 90%;
+  height: 50vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.meus-projetos .cardcontent {
+  background-color: #0d000d;
+  z-index: 3;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 0 0 10px 10px;
+}
+.meus-projetos .img-container {
+  height: 20vh;
 }
 .meus-projetos .img-projeto {
   width: 100%;
@@ -313,11 +369,24 @@ html {
 .contatos .text-container > h1 {
   color: #ffffff;
 }
+.contatos .gif {
+  display: none;
+  width: 40px;
+  height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .contatos .form-container {
   background-color: #0d000d;
-  border: solid 2px #160016;
+  border: solid 2px #be1ec7;
   border-radius: 50px;
-  height: 40vh;
+  min-width: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 4vh;
   width: 70vw;
   display: flex;
   flex-direction: column;
@@ -332,6 +401,7 @@ html {
   place-items: center;
   background-color: #160016;
   border-radius: 48px 48px 0 0;
+  border-bottom: 2px solid #d837e1;
 }
 .contatos .form-container > .text-container > h2 {
   color: #ffffff;
@@ -348,12 +418,17 @@ html {
 }
 .contatos .form-container > .form-field-container .input {
   border: 1px solid #160016;
+  border: 1px solid #d837e1;
+  word-break: break-word;
+  color: #ffffff;
+  width: 100%;
   background-color: #160016;
 }
 .contatos .form-container > .form-field-container .input:hover {
-  border: 1px solid #490049;
+  border: 1px solid #fbe8fc;
 }
 .contatos .form-container > .form-field-container .input:last-child {
   height: 12vh;
+  resize: none;
 }
 /*# sourceMappingURL=main.css.map */

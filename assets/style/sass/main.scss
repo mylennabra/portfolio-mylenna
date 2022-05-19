@@ -154,8 +154,8 @@ html{
         .home-icon{
             border-radius: 40%;
             position: relative;
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
         }
     }
     
@@ -167,6 +167,10 @@ html{
     margin-top: 5vh;
     justify-content:space-around;
     .contact{
+        &:hover{
+            @include animation();
+
+        }
         background-color: c.$scnd-clr;
         border-radius: 50%;
         width: 50px;
@@ -184,23 +188,34 @@ html{
     background-color: c.$primary-clr;
     @include flex-page();
     
+    hr{
+        margin: 15px auto;
+        width: 90%;
+        background-color: c.$scnd-bckgnd-clr;
+    }
+
     .text-container{
         margin: 0 auto;
         & > h1{
             @extend .scnd-title; 
         }
+        & > h2{
+            font-weight: bold;
+        }
         & > h3{
             @extend .scnd-text; 
         }
+
+        .cursos > a{
+            color: c.$normal-txt-clr;
+            text-decoration: underline;
+            
+        }
     }
-    // .down-btn-container{
-    //      background-color:  c.$bckgnd-clr;
-    //     .down-btn{
-    //         path{
-    //             fill: c.$thrd-clr;            
-    //         }
-    //     }
-    // }
+
+    .down-btn-container{
+        margin-top:0;
+    }
 }
 
 .minhas-espc{
@@ -239,6 +254,10 @@ html{
         border-radius: 15%;
         width: 6em;
         height: 6em;
+        &:hover{
+            background-color: lighten(c.$scnd-clr, 10%);
+            transition-duration: .5s;
+        }
     }
 
     .esp-icon{
@@ -246,14 +265,6 @@ html{
         width: 50%;
     }
 
-    // .down-btn-container{
-    //     background-color: c.$primary-clr;
-    //     .down-btn{
-    //         path{
-    //             fill: c.$thrd-clr;            
-    //         }
-    //     }
-    // }
 }
 
 .meus-projetos{
@@ -261,11 +272,13 @@ html{
     @include flex-page();
     justify-content:flex-start;
     box-sizing: border-box;
-    min-height: 200vh;
+    height:fit-content;
+    //min-height: 200vh;
 
     .text-container{
         margin: 0 auto;
         margin-bottom: 1vh;
+        margin-top: 1vh;
         & > h1{
            @extend .scnd-title;
         }
@@ -277,21 +290,45 @@ html{
             font-weight: bold;
         }
 
-        & > a{
+        & > p{
             color: c.$thrd-clr;
         }
     }
 
     .projetos-container{
         @include center-grid();
+        place-items: start center;
+        margin-top: 2vh;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1;
+        height: fit-content;
     }
 
     .projetos-block{
         background-color: c.$bckgnd-clr;
         border: solid 1px c.$thrd-clr;
         border-radius: 10px;
-        margin-bottom: 1vh;
+        margin-bottom: 2vh;
         max-width:90%;
+        height: 50vh;
+        box-sizing: border-box;
+        @include center-flex();
+        justify-content:space-between;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .cardcontent{
+        background-color: c.$bckgnd-clr;
+        z-index: 3;
+        width: 100%;
+        height: fit-content;
+        border-radius: 0 0 10px 10px;
+
+    }
+
+    .img-container{
+        height: 20vh;
     }
 
     .img-projeto{
@@ -308,19 +345,8 @@ html{
     }
 
     .saibamais{
-        
         padding: 1vh;
-
     }
-    
-    // .projetos-container{
-    //     display: grid;
-    //     gap: 1;
-    //     margin-top: 0;
-    //     padding-top: 0;
-    //     height: fit-content;
-    // }
-
 }
 
 
@@ -336,27 +362,30 @@ html{
         }
         & > h3{
             @extend .text; 
-         }
+        }
     }
-    // .down-btn-container{
-    //     @include center-grid();
-    //     max-height: 5vh;
-    //     & > h3{
-    //         font-size:12px;
-    //     }
-    // }
+    
+    .gif{
+        display: none;
+        width: 40px;
+        height: 40px;
+        user-select: none;
+    }
 
     .form-container{
         background-color: c.$bckgnd-clr;
-        border: solid 2px c.$primary-clr;
+        border: solid 2px c.$thrd-clr;
         border-radius:50px;
-        height: 40vh;
+        min-width: 250px;
+        height: fit-content;
+        padding-bottom: 4vh;
         width: 70vw;
         display:flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
 
+        
         & > .text-container{
             margin: 0;
             height: 8vh;
@@ -364,6 +393,7 @@ html{
             @include center-grid();
             background-color: c.$primary-clr; 
             border-radius:48px 48px 0 0;
+            border-bottom: 2px solid lighten(c.$thrd-clr, 10%);
 
             & > h2{
                 color: c.$scnd-normal-txt-clr;
@@ -376,6 +406,7 @@ html{
         & > .form-field-container{
             padding-top: 2vh;
             max-width: 80%;
+            
             & > h2{
                 color: c.$normal-txt-clr;
                 font-size: 20px;
@@ -383,14 +414,19 @@ html{
 
             .input{
                 border: 1px solid c.$scnd-clr; 
+                border: 1px solid lighten(c.$thrd-clr, 10%); 
+                word-break: break-word;
+                color: c.$normal-txt-clr;
+                width:100%;
                 
                 &:hover{
-                    border: 1px solid lighten(c.$scnd-clr, 10%); 
+                    border: 1px solid lighten(c.$thrd-clr, 50%);
                 }
                 background-color: c.$scnd-clr;
 
                 &:last-child{
                     height: 12vh;
+                    resize: none;
                 }
             }
             
