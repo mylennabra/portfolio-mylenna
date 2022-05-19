@@ -1,3 +1,5 @@
+@use '../util/variables' as c;
+
 @mixin center-flex{
     display: flex;
     align-items: center;
@@ -18,3 +20,9 @@
     place-items: center;
 }
 
+@mixin animation{
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    transform: translatey(-4px);
+    background-color: lighten(c.$scnd-clr, 20%);
+}
