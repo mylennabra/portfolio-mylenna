@@ -130,17 +130,23 @@ html {
 
 .dropdown-divider {
   background-color: #be1ec7 !important;
+  margin: 0 !important;
 }
 
 .dropdown-content {
   background-color: #160016 !important;
   border: solid 1px #be1ec7;
+  padding: 0 !important;
+  margin-right: 1rem;
 }
 
 .dropdown-item {
   color: #fff !important;
   font-family: "Source Sans Pro", sans-serif;
-  padding-left: 1rem !important;
+  padding: 0.5rem 1rem !important;
+}
+.dropdown-item:hover {
+  background-color: #200020 !important;
 }
 
 .home {

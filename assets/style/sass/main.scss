@@ -131,17 +131,23 @@ html{
 
 .dropdown-divider{
     background-color: c.$thrd-clr !important;
+    margin: 0 !important;
 }
 
 .dropdown-content{
     background-color: c.$primary-clr !important;
     border: solid 1px c.$thrd-clr;
+    padding: 0 !important;
+    margin-right: 1rem;
 }
 
 .dropdown-item{
     color: #fff !important;
     font-family: 'Source Sans Pro', sans-serif;
-    padding-left: 1rem !important;
+    padding: .5rem 1rem !important;
+    &:hover{
+        background-color: lighten(c.$primary-clr, 2%) !important;
+    }
 }
 
 .home{
