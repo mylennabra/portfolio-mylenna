@@ -1,4 +1,5 @@
 @use '../util/util' as *;
+@use '../util/variables' as c;
 
 @mixin for-size($range) {
     $phone-upper-boundary: 500px;
@@ -48,7 +49,34 @@
         grid-template-columns: 50px 50px 50px !important;
         margin-top: 3vh;
     }
+    .divider{
+        display: none;
+    }
 
+    .sobre-mim{
+        &>.text-container{
+            max-width: 60%;
+        }
+        &-container{
+            margin-top: 5vh;
+            padding: 2vh;
+            display: grid;
+            gap: 2vh;
+            height:fit-content;
+            grid-template-columns: 1fr 1fr;
+        }
+        &-block{
+            //@include center-grid();
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            border: 1px solid c.$thrd-clr;
+            border-radius: 0.5rem;
+            padding:2vh;
+        }
+
+    }
+    
 }
 
 @include for-size(big-desktop-up){

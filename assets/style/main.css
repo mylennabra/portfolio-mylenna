@@ -1,3 +1,33 @@
+@media (min-width: 1200px) {
+  .minhas-espc--container {
+    grid-template-columns: 50px 50px 50px !important;
+    margin-top: 3vh;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .sobre-mim > .text-container {
+    max-width: 60%;
+  }
+  .sobre-mim-container {
+    margin-top: 5vh;
+    padding: 2vh;
+    display: grid;
+    gap: 2vh;
+    height: fit-content;
+    grid-template-columns: 1fr 1fr;
+  }
+  .sobre-mim-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid #be1ec7;
+    border-radius: 0.5rem;
+    padding: 2vh;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -201,6 +231,9 @@ html {
 }
 .sobre-mim .text-container > h2 {
   font-weight: bold;
+}
+.sobre-mim .text-container > h3 {
+  margin-top: 1vh;
 }
 .sobre-mim .text-container .cursos > a {
   color: #ffffff;
