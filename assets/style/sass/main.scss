@@ -13,6 +13,10 @@ html{
     background-color: c.$bckgnd-clr !important;
 }
 
+body, button, input, optgroup, select, textarea {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
 .texto{
     color: c.$title-txt-clr;
     font-family: 'Source Sans Pro', sans-serif;
