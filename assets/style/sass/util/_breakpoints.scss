@@ -1,3 +1,5 @@
+@use '../util/util' as *;
+
 @mixin for-size($range) {
     $phone-upper-boundary: 500px;
     $tablet-portrait-upper-boundary: 900px;
@@ -42,6 +44,10 @@
 }
 
 @include for-size(desktop-up){
+    .minhas-espc--container{
+        grid-template-columns: 50px 50px 50px !important;
+        margin-top: 3vh;
+    }
 
 }
 
