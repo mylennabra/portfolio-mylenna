@@ -1,4 +1,8 @@
 @media (min-width: 1200px) {
+  .text-container > h3 {
+    font-size: 1.5rem !important;
+  }
+
   .minhas-espc--container {
     grid-template-columns: 50px 50px 50px !important;
     margin-top: 3vh;
@@ -12,10 +16,12 @@
     max-width: 60%;
   }
   .sobre-mim-container {
+    max-width: auto;
     margin-top: 5vh;
     padding: 2vh;
     display: grid;
-    gap: 2vh;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -29,6 +35,17 @@
     border-radius: 0.5rem;
     padding: 2vh;
   }
+
+  .meus-projetos {
+    height: 100vh;
+  }
+  .meus-projetos .projetos-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr !important;
+  }
+  .meus-projetos .projetos-container > .projetos-block {
+    max-height: 60vh;
+  }
 }
 * {
   margin: 0;
@@ -39,6 +56,10 @@
 html {
   height: 600vh !important;
   background-color: #0d000d !important;
+}
+
+body, button, input, optgroup, select, textarea {
+  font-family: "Source Sans Pro", sans-serif !important;
 }
 
 .texto, .text-container {
@@ -322,19 +343,18 @@ html {
   padding-top: 7rem;
   justify-content: flex-start;
   box-sizing: border-box;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 200vh;
 }
 .meus-projetos .text-container {
   margin: 0 auto;
-  margin-bottom: 1vh;
+  padding-bottom: 1vh;
   margin-top: 1vh;
+  border-bottom: 1px solid #be1ec7;
+}
+.meus-projetos .text-container:first-child {
+  border-bottom: none;
 }
 .meus-projetos .text-container > h2 {
-  font-weight: bold;
-}
-.meus-projetos .text-container > h3, .meus-projetos .text-container time {
   font-weight: bold;
 }
 .meus-projetos .text-container > p {
@@ -345,7 +365,7 @@ html {
   place-items: center;
   place-items: start center;
   margin-top: 2vh;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 1;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -370,10 +390,13 @@ html {
   background-color: #0d000d;
   z-index: 3;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-height: 35vh;
   border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .meus-projetos .img-container {
   height: 20vh;

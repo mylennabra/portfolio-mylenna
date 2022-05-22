@@ -45,6 +45,12 @@
 }
 
 @include for-size(desktop-up){
+    .text-container{
+        &>h3{
+            font-size:1.5rem !important;
+        }
+    }
+
     .minhas-espc--container{
         grid-template-columns: 50px 50px 50px !important;
         margin-top: 3vh;
@@ -53,15 +59,17 @@
         display: none;
     }
 
+
     .sobre-mim{
         &>.text-container{
             max-width: 60%;
         }
         &-container{
+            max-width: auto;
             margin-top: 5vh;
             padding: 2vh;
             display: grid;
-            gap: 2vh;
+            column-gap: 1vh;
             height:fit-content;
             grid-template-columns: 1fr 1fr;
         }
@@ -73,6 +81,20 @@
             border: 1px solid c.$thrd-clr;
             border-radius: 0.5rem;
             padding:2vh;
+        }
+
+    }
+
+    .meus-projetos{
+        height:100vh !important;
+        .projetos-container{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr !important;
+            
+            & > .projetos-block {
+                //max-width:30% !important;
+                max-height: 60vh;
+            }
         }
 
     }
