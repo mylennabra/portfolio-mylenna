@@ -1,4 +1,28 @@
 @media (min-width: 1200px) {
+  .home {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: start center;
+  }
+  .home .text-container {
+    grid-area: 1/1/2/2;
+  }
+  .home .contact-container {
+    margin-top: 0;
+    grid-area: 2/1/3/2;
+  }
+  .home .home-icon-container {
+    grid-area: 1/2/3/3;
+  }
+  .home .home-icon-container .home-icon {
+    width: 500px !important;
+    height: 500px !important;
+  }
+  .home .down-btn-container {
+    grid-area: 3/1/4/3;
+  }
+
   .text-container > h3 {
     font-size: 1.5rem !important;
   }
@@ -37,7 +61,7 @@
   }
 
   .meus-projetos {
-    height: 100vh;
+    height: 100vh !important;
   }
   .meus-projetos .projetos-container {
     grid-template-columns: repeat(3, 1fr);
@@ -55,7 +79,32 @@
 
 html {
   height: 600vh !important;
-  background-color: #0d000d !important;
+  background: linear-gradient(326deg, #160016, #25002a, #26002f);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 26% 0%;
+  }
+  50% {
+    background-position: 75% 100%;
+  }
+  100% {
+    background-position: 26% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 26% 0%;
+  }
+  50% {
+    background-position: 75% 100%;
+  }
+  100% {
+    background-position: 26% 0%;
+  }
 }
 
 body, button, input, optgroup, select, textarea {
@@ -223,6 +272,9 @@ body, button, input, optgroup, select, textarea {
   position: relative;
   width: 250px;
   height: 250px;
+}
+.home .home-icon-container .typing {
+  display: none;
 }
 
 .contact-container {
