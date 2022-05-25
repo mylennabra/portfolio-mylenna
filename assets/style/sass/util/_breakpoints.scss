@@ -45,6 +45,9 @@
 }
 
 @include for-size(desktop-up){
+    html{
+        height:500vh !important;
+    }
     .home{
         display:grid !important;
         grid-template-columns: 1fr 1fr;
