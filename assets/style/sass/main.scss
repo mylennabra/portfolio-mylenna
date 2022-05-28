@@ -408,20 +408,20 @@ body, button, input, optgroup, select, textarea {
     
     .gif{
         display: none;
-        max-width: 80%;
+        max-width: 90%;
         aspect-ratio: 1/1;
         user-select: none;
-        margin: 1vh auto auto 10vw;
+        margin: 4vh auto 5vh auto;
     }
 
     .form-container{
         background-color: c.$bckgnd-clr;
         border: solid 2px c.$thrd-clr;
         border-radius:50px;
-        min-width: 250px;
+        min-width: 300px;
         height: fit-content;
         padding-bottom: 4vh;
-        width: 70vw;
+        max-width: 70vw;
         display:flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -459,6 +459,7 @@ body, button, input, optgroup, select, textarea {
                 border: 1px solid lighten(c.$thrd-clr, 10%); 
                 word-break: break-word;
                 color: c.$normal-txt-clr;
+                min-width: 90%;
                 width:100%;
                 
                 &:hover{
@@ -473,5 +474,8 @@ body, button, input, optgroup, select, textarea {
             }
             
         }
+    }
+    &>.down-btn-container{
+        height: 25px !important;
     }
 }

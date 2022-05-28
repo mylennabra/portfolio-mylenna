@@ -128,18 +128,21 @@
     
     .contatos{
         display: grid !important;
+        place-items: start center;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4,1fr);
         &>.text-container{
             grid-area: 1 / 1 / 2 / 3;
         }
         &>.gif{
-            grid-area: 2 / 1 / 4 / 2;
+            grid-area: 2 / 2 / 3 / 3;
             display:block !important;
         }
         &>.form-container{
-            grid-area: 2 / 2 / 3 / 3;
-            max-width: 50%;
+            .input{
+                min-width: 200px;
+            }
+            grid-area: 2 / 1 / 4 / 2;
             margin: 0 auto;
         }
         &>.contact-container{
