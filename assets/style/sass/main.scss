@@ -408,9 +408,10 @@ body, button, input, optgroup, select, textarea {
     
     .gif{
         display: none;
-        width: 40px;
-        height: 40px;
+        max-width: 80%;
+        aspect-ratio: 1/1;
         user-select: none;
+        margin: 1vh auto auto 10vw;
     }
 
     .form-container{
