@@ -71,6 +71,34 @@
   .meus-projetos .projetos-container > .projetos-block {
     max-height: 60vh;
   }
+
+  .contatos {
+    display: grid !important;
+    place-items: start center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .contatos > .text-container {
+    grid-area: 1/1/2/3;
+  }
+  .contatos > .gif {
+    grid-area: 2/2/3/3;
+    display: block !important;
+  }
+  .contatos > .form-container {
+    grid-area: 2/1/4/2;
+    margin: 0 auto;
+  }
+  .contatos > .form-container .input {
+    min-width: 200px;
+  }
+  .contatos > .contact-container {
+    grid-area: 3/2/4/3;
+    margin: 0 auto;
+  }
+  .contatos > .down-btn-container {
+    grid-area: 4/1/5/3;
+  }
 }
 * {
   margin: 0;
@@ -478,18 +506,19 @@ body, button, input, optgroup, select, textarea {
 }
 .contatos .gif {
   display: none;
-  width: 40px;
-  height: 40px;
+  max-width: 90%;
+  aspect-ratio: 1/1;
   user-select: none;
+  margin: 4vh auto 5vh auto;
 }
 .contatos .form-container {
   background-color: #0d000d;
   border: solid 2px #be1ec7;
   border-radius: 50px;
-  min-width: 250px;
+  min-width: 300px;
   height: fit-content;
   padding-bottom: 4vh;
-  width: 70vw;
+  max-width: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -523,6 +552,7 @@ body, button, input, optgroup, select, textarea {
   border: 1px solid #d837e1;
   word-break: break-word;
   color: #ffffff;
+  min-width: 90%;
   width: 100%;
   background-color: #160016;
 }
@@ -532,6 +562,38 @@ body, button, input, optgroup, select, textarea {
 .contatos .form-container > .form-field-container .input:last-child {
   height: 12vh;
   resize: none;
+}
+.contatos > .down-btn-container {
+  height: 25px !important;
+}
+
+.themeButtons {
+  background-color: #be1ec7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 3.6rem;
+  height: 1.8rem;
+  padding: 1px;
+  margin-right: 2vw;
+  margin-top: 1vh;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  box-shadow: 1px 1px 2px black;
+}
+.themeButtons #themeButtonDark {
+  display: none;
+}
+.themeButtons #toggle {
+  background-color: #160016;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */
