@@ -3,9 +3,9 @@
 
 ## Ferramentas utilizadas
 
-- HTML
-- SCSS
-- Bulma
+- HTML <img height="16px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" />          
+- SCSS <img height="16px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+- Bulma  <img height="16px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bulma/bulma-plain.svg" /> 
 
 <hr>
 
