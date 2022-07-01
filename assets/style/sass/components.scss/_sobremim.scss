@@ -1,0 +1,38 @@
+@use '../util/util' as *;
+@use '../util/texts' as *;
+@use '../util/variables' as c;
+
+.sobre-mim{
+  background-color: c.$primary-clr;
+  @include flex-page();
+  
+  hr{
+      margin: 15px auto;
+      width: 90%;
+      background-color: c.$scnd-bckgnd-clr;
+  }
+
+  .text-container{
+      margin: 0 auto;
+      & > h1{
+          @extend .scnd-title; 
+      }
+      & > h2{
+          font-weight: bold;
+      }
+      & > h3{
+          @extend .scnd-text; 
+          margin-top:1vh;
+      }
+
+      .cursos > a{
+          color: c.$normal-txt-clr;
+          text-decoration: underline;
+          
+      }
+  }
+
+  .down-btn-container{
+      margin-top:0;
+  }
+}

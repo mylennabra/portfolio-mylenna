@@ -1,0 +1,52 @@
+@use '../util/util' as *;
+@use '../util/texts' as *;
+@use '../util/variables' as c;
+
+.minhas-espc{
+  background-color: c.$bckgnd-clr;
+  @include flex-page();
+  .text-container{
+      margin: auto 0;
+      & > h1{
+         @extend .title; 
+      }
+      & > h3{
+          @extend .text; 
+       }
+  }
+
+  &--container{
+      @include center-grid();
+      width: 50%;
+      height: 60%;
+      align-items: flex-start;
+      justify-content: space-between;
+      grid-template-columns: 50px 50px;
+      
+  }
+
+  &--block {
+      & > h3{
+          @extend .scnd-text;
+      }
+      @include center-flex();
+      justify-content:flex-start;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      flex-direction: column;
+      background-color: c.$scnd-clr;
+      border-radius: 15%;
+      width: 6em;
+      height: 6em;
+      &:hover{
+          background-color: lighten(c.$scnd-clr, 10%);
+          transition-duration: .5s;
+      }
+  }
+
+  .esp-icon{
+      margin-top: 5px;
+      width: 50%;
+  }
+
+}

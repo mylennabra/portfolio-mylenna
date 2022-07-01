@@ -1,0 +1,90 @@
+@use '../util/util' as *;
+@use '../util/texts' as *;
+@use '../util/variables' as c;
+
+.meus-projetos{
+  background-color: c.$primary-clr;
+  @include flex-page();
+  justify-content:flex-start;
+  box-sizing: border-box;
+  height: 200vh;
+  
+  .text-container{
+      margin: 0 auto;
+      padding-bottom: 1vh;
+      margin-top: 1vh;
+      border-bottom: 1px solid c.$thrd-clr;
+      &:first-child{
+          border-bottom: none;
+      }
+      & > h1{
+         @extend .scnd-title;
+      }
+      & > h2{
+          font-weight: bold;   
+      }
+      & > h3, time{
+          @extend .scnd-text; 
+      }
+
+      & > p{
+          color: c.$thrd-clr;
+      }
+  }
+
+  .projetos-container{
+      @include center-grid();
+      place-items: start center;
+      margin-top: 2vh;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 1;
+      height: fit-content;
+  }
+
+  .projetos-block{
+      box-sizing: inherit;
+      background-color: c.$bckgnd-clr;
+      border: solid 1px c.$thrd-clr;
+      border-radius: 10px;
+      margin-bottom: 2vh;
+      max-width:90%;
+      height: 60vh;
+      box-sizing: border-box;
+      @include center-flex();
+      justify-content:space-between;
+      flex-direction: column;
+      flex-wrap: nowrap;
+  }
+
+  .cardcontent{
+      background-color: c.$bckgnd-clr;
+      z-index: 3;
+      width: 100%;
+      max-height: 35vh;
+      border-radius: 0 0 10px 10px;
+      @include center-flex();
+      flex-direction: column;
+      justify-content:space-between;
+  }
+
+  .img-container{
+      height: 20vh;
+  }
+
+  .img-projeto{
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+  }
+
+  .divider{
+      padding: 0;
+      margin: 0;
+      height:1px;
+      background-color: c.$thrd-clr;
+  }
+
+  .saibamais{
+      
+      padding: 1vh;
+  }
+}

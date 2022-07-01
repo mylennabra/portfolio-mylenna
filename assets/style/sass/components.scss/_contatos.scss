@@ -1,0 +1,93 @@
+@use '../util/util' as *;
+@use '../util/texts' as *;
+@use '../util/variables' as c;
+
+
+.contatos{
+  background-color: c.$bckgnd-clr;
+  @include flex-page();
+  width: 100%;
+  .text-container{
+      margin: 0 auto;
+      & > h1{
+         @extend .title;
+         color: c.$title-txt-clr;
+      }
+      & > h3{
+          @extend .text; 
+      }
+  }
+  
+  .gif{
+      display: none;
+      max-width: 90%;
+      aspect-ratio: 1/1;
+      user-select: none;
+      margin: 4vh auto 5vh auto;
+  }
+
+  .form-container{
+      background-color: c.$bckgnd-clr;
+      border: solid 2px c.$thrd-clr;
+      border-radius:50px;
+      min-width: 300px;
+      height: fit-content;
+      padding-bottom: 4vh;
+      max-width: 70vw;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      
+      & > .text-container{
+          margin: 0;
+          height: 8vh;
+          min-width: 100%;
+          @include center-grid();
+          background-color: c.$primary-clr; 
+          border-radius:48px 48px 0 0;
+          border-bottom: 2px solid lighten(c.$thrd-clr, 10%);
+
+          & > h2{
+              color: c.$scnd-normal-txt-clr;
+              font-weight: bold;
+              font-size: 20px;
+          }
+
+      }
+
+      & > .form-field-container{
+          padding-top: 2vh;
+          max-width: 80%;
+          
+          & > h2{
+              color: c.$normal-txt-clr;
+              font-size: 20px;
+          }
+
+          .input{
+              border: 1px solid c.$scnd-clr; 
+              border: 1px solid lighten(c.$thrd-clr, 10%); 
+              word-break: break-word;
+              color: c.$normal-txt-clr;
+              min-width: 90%;
+              width:100%;
+              
+              &:hover{
+                  border: 1px solid lighten(c.$thrd-clr, 50%);
+              }
+              background-color: c.$scnd-clr;
+
+              &:last-child{
+                  height: 12vh;
+                  resize: none;
+              }
+          }
+          
+      }
+  }
+  &>.down-btn-container{
+      height: 25px !important;
+  }
+}
