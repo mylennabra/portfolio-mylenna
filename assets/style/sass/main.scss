@@ -2,6 +2,12 @@
 @use '../sass/util/util' as *;
 @use '../sass/util/variables' as c;
 
+@forward 'components.scss/home';
+@forward 'components.scss/sobremim';
+@forward 'components.scss/minhasespc';
+@forward 'components.scss/meusprojetos';
+@forward 'components.scss/contatos';
+
 *{
     margin: 0;
     padding: 0;
@@ -9,25 +15,12 @@
 }
 
 html{
-    height: 600vh;
-    //background-color: c.$bckgnd-clr !important;
+    height: fit-content;
     background: linear-gradient(326deg, #160016, #25002a, #26002f);
     background-size: 600% 600%;
 
-    -webkit-animation: AnimationName 10s ease infinite;
-    -moz-animation: AnimationName 10s ease infinite;
-    animation: AnimationName 10s ease infinite;
+    animation: AnimationName 5s ease infinite;
 
-    @-webkit-keyframes AnimationName {
-        0%{background-position:26% 0%}
-        50%{background-position:75% 100%}
-        100%{background-position:26% 0%}
-    }
-    @-moz-keyframes AnimationName {
-        0%{background-position:26% 0%}
-        50%{background-position:75% 100%}
-        100%{background-position:26% 0%}
-    }
     @keyframes AnimationName {
         0%{background-position:26% 0%}
         50%{background-position:75% 100%}
@@ -39,91 +32,11 @@ body, button, input, optgroup, select, textarea {
     font-family: 'Source Sans Pro', sans-serif !important;
 }
 
-.texto{
-    color: c.$title-txt-clr;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight:bold;
-}
 
-.title{
-    color: c.$title-txt-clr;
-    font-size:32px;
-    font-weight: bold;
-    margin-bottom: 3vh;
-}
-
-.scnd-title{
-    color: c.$scnd-title-txt-clr;
-    @extend .title;
-}
-
-.text{
-    color: c.$normal-txt-clr;
-    font-size:16px;
-    font-weight: regular;
-}
-
-.scnd-text{
-    color: c.$scnd-normal-txt-clr;
-    @extend .text;
-}
-
-.btn{
-    background-color: c.$primary-clr;
-    border: none;
-    color: c.$scnd-bckgnd-clr;
-    border-radius: 100%;
-    &:hover{
-        cursor: pointer;
-    }
-}
-
-.text-container{
-    max-width: 80%;
-    margin-top: 5vh;
-    text-align: center;
-    @extend .texto;
-    
-    & > h1{
-        @extend .title;
-        &::after{
-            content: "";
-            display: block;
-            width: 50%;
-            height: 2px;
-            margin: 0 auto;
-            background-color: c.$thrd-clr;
-            animation: after 5s alternate 1;
-            
-
-
-            @keyframes after {
-                from {
-                    transform: scalex(.1);
-                    transform-origin:bottom left;
-                }
-                to {
-                    transform: scalex(1);
-                    transform-origin:bottom left;
-                }
-            }
-        }
-    }
-    
-    & > h2{
-        @extend .text;
-        font-size: 24px;
-    }
-    
-    & > h3{
-        @extend .text;
-    }
-}
 
 .down-btn-container{
     @include center-flex();
     align-items:flex-start;
-    // background-color: c.$primary-clr;
     width: 100%;
     height: 20vh;
     margin-top:5vh;
@@ -177,26 +90,6 @@ body, button, input, optgroup, select, textarea {
     }
 }
 
-.home{
-    @include flex-page();
-    
-    .home-icon-container{
-        width: 100%;
-        @include center-flex();
-        
-        .home-icon{
-            border-radius: 40%;
-            position: relative;
-            width: 250px;
-            height: 250px;
-        }
-        .typing{
-            display: none;
-        }
-    }
-    
-}
-
 .contact-container{
     @include center-flex();
     width: 60%;
@@ -220,265 +113,6 @@ body, button, input, optgroup, select, textarea {
     }
 }
 
-.sobre-mim{
-    background-color: c.$primary-clr;
-    @include flex-page();
-    
-    hr{
-        margin: 15px auto;
-        width: 90%;
-        background-color: c.$scnd-bckgnd-clr;
-    }
-
-    .text-container{
-        margin: 0 auto;
-        & > h1{
-            @extend .scnd-title; 
-        }
-        & > h2{
-            font-weight: bold;
-        }
-        & > h3{
-            @extend .scnd-text; 
-            margin-top:1vh;
-        }
-
-        .cursos > a{
-            color: c.$normal-txt-clr;
-            text-decoration: underline;
-            
-        }
-    }
-
-    .down-btn-container{
-        margin-top:0;
-    }
-}
-
-.minhas-espc{
-    background-color: c.$bckgnd-clr;
-    @include flex-page();
-    .text-container{
-        margin: auto 0;
-        & > h1{
-           @extend .title; 
-        }
-        & > h3{
-            @extend .text; 
-         }
-    }
-
-    &--container{
-        @include center-grid();
-        width: 50%;
-        height: 60%;
-        align-items: flex-start;
-        justify-content: space-between;
-        grid-template-columns: 50px 50px;
-        
-    }
-
-    &--block {
-        & > h3{
-            @extend .scnd-text;
-        }
-        @include center-flex();
-        justify-content:flex-start;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-        flex-direction: column;
-        background-color: c.$scnd-clr;
-        border-radius: 15%;
-        width: 6em;
-        height: 6em;
-        &:hover{
-            background-color: lighten(c.$scnd-clr, 10%);
-            transition-duration: .5s;
-        }
-    }
-
-    .esp-icon{
-        margin-top: 5px;
-        width: 50%;
-    }
-
-}
-
-.meus-projetos{
-    background-color: c.$primary-clr;
-    @include flex-page();
-    justify-content:flex-start;
-    box-sizing: border-box;
-    height: 200vh;
-    
-    .text-container{
-        margin: 0 auto;
-        padding-bottom: 1vh;
-        margin-top: 1vh;
-        border-bottom: 1px solid c.$thrd-clr;
-        &:first-child{
-            border-bottom: none;
-        }
-        & > h1{
-           @extend .scnd-title;
-        }
-        & > h2{
-            font-weight: bold;   
-        }
-        & > h3, time{
-            @extend .scnd-text; 
-        }
-
-        & > p{
-            color: c.$thrd-clr;
-        }
-    }
-
-    .projetos-container{
-        @include center-grid();
-        place-items: start center;
-        margin-top: 2vh;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 1;
-        height: fit-content;
-    }
-
-    .projetos-block{
-        background-color: c.$bckgnd-clr;
-        border: solid 1px c.$thrd-clr;
-        border-radius: 10px;
-        margin-bottom: 2vh;
-        max-width:90%;
-        height: 50vh;
-        box-sizing: border-box;
-        @include center-flex();
-        justify-content:space-between;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-
-    .cardcontent{
-        background-color: c.$bckgnd-clr;
-        z-index: 3;
-        width: 100%;
-        max-height: 35vh;
-        border-radius: 0 0 10px 10px;
-        @include center-flex();
-        flex-direction: column;
-        justify-content:space-between;
-    }
-
-    .img-container{
-        height: 20vh;
-    }
-
-    .img-projeto{
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-    }
-
-    .divider{
-        padding: 0;
-        margin: 0;
-        height:1px;
-        background-color: c.$thrd-clr;
-    }
-
-    .saibamais{
-        
-        padding: 1vh;
-    }
-}
-
-
-.contatos{
-    background-color: c.$bckgnd-clr;
-    @include flex-page();
-    width: 100%;
-    .text-container{
-        margin: 0 auto;
-        & > h1{
-           @extend .title;
-           color: c.$title-txt-clr;
-        }
-        & > h3{
-            @extend .text; 
-        }
-    }
-    
-    .gif{
-        display: none;
-        max-width: 90%;
-        aspect-ratio: 1/1;
-        user-select: none;
-        margin: 4vh auto 5vh auto;
-    }
-
-    .form-container{
-        background-color: c.$bckgnd-clr;
-        border: solid 2px c.$thrd-clr;
-        border-radius:50px;
-        min-width: 300px;
-        height: fit-content;
-        padding-bottom: 4vh;
-        max-width: 70vw;
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-
-        
-        & > .text-container{
-            margin: 0;
-            height: 8vh;
-            min-width: 100%;
-            @include center-grid();
-            background-color: c.$primary-clr; 
-            border-radius:48px 48px 0 0;
-            border-bottom: 2px solid lighten(c.$thrd-clr, 10%);
-
-            & > h2{
-                color: c.$scnd-normal-txt-clr;
-                font-weight: bold;
-                font-size: 20px;
-            }
-
-        }
-
-        & > .form-field-container{
-            padding-top: 2vh;
-            max-width: 80%;
-            
-            & > h2{
-                color: c.$normal-txt-clr;
-                font-size: 20px;
-            }
-
-            .input{
-                border: 1px solid c.$scnd-clr; 
-                border: 1px solid lighten(c.$thrd-clr, 10%); 
-                word-break: break-word;
-                color: c.$normal-txt-clr;
-                min-width: 90%;
-                width:100%;
-                
-                &:hover{
-                    border: 1px solid lighten(c.$thrd-clr, 50%);
-                }
-                background-color: c.$scnd-clr;
-
-                &:last-child{
-                    height: 12vh;
-                    resize: none;
-                }
-            }
-            
-        }
-    }
-    &>.down-btn-container{
-        height: 25px !important;
-    }
-}
 
 
 .themeButtons{
@@ -512,3 +146,5 @@ body, button, input, optgroup, select, textarea {
         transition-duration: 0.5s;
     }
 }
+
+// @include for-size(desktop-up);
