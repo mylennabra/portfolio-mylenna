@@ -1,0 +1,83 @@
+@use '../util/util' as *;
+@use '../util/variables' as c;
+
+.texto{
+  color: c.$title-txt-clr;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:bold;
+}
+
+.title{
+  color: c.$title-txt-clr;
+  font-size:32px;
+  font-weight: bold;
+  margin-bottom: 3vh;
+}
+
+.scnd-title{
+  color: c.$scnd-title-txt-clr;
+  @extend .title;
+}
+
+.text{
+  color: c.$normal-txt-clr;
+  font-size:16px;
+  font-weight: regular;
+}
+
+.scnd-text{
+  color: c.$scnd-normal-txt-clr;
+  @extend .text;
+}
+
+.btn{
+  background-color: c.$primary-clr;
+  border: none;
+  color: c.$scnd-bckgnd-clr;
+  border-radius: 100%;
+  &:hover{
+      cursor: pointer;
+  }
+}
+
+.text-container{
+  max-width: 80%;
+  margin-top: 5vh;
+  text-align: center;
+  @extend .texto;
+  
+  & > h1{
+      @extend .title;
+      &::after{
+          content: "";
+          display: block;
+          width: 50%;
+          height: 2px;
+          margin: 0 auto;
+          background-color: c.$thrd-clr;
+          animation: after 5s alternate 1;
+          
+
+
+          @keyframes after {
+              from {
+                  transform: scalex(.1);
+                  transform-origin:bottom left;
+              }
+              to {
+                  transform: scalex(1);
+                  transform-origin:bottom left;
+              }
+          }
+      }
+  }
+  
+  & > h2{
+      @extend .text;
+      font-size: 24px;
+  }
+  
+  & > h3{
+      @extend .text;
+  }
+}
