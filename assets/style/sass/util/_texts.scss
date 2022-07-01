@@ -2,36 +2,36 @@
 @use '../util/variables' as c;
 
 .texto{
-  color: c.$title-txt-clr;
+  color: c.$txt-clr;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight:bold;
 }
 
 .title{
-  color: c.$title-txt-clr;
+  color: c.$txt-clr;
   font-size:32px;
   font-weight: bold;
   margin-bottom: 3vh;
 }
 
 .scnd-title{
-  color: c.$scnd-title-txt-clr;
+  color: c.$scnd-txt-clr;
   @extend .title;
 }
 
 .text{
-  color: c.$normal-txt-clr;
+  color: c.$txt-clr;
   font-size:16px;
   font-weight: regular;
 }
 
 .scnd-text{
-  color: c.$scnd-normal-txt-clr;
+  color: c.$scnd-txt-clr;
   @extend .text;
 }
 
 .btn{
-  background-color: c.$primary-clr;
+  background-color:transparent;
   border: none;
   color: c.$scnd-bckgnd-clr;
   border-radius: 100%;
@@ -54,7 +54,7 @@
           width: 50%;
           height: 2px;
           margin: 0 auto;
-          background-color: c.$thrd-clr;
+          background-color: c.$scnd-clr;
           animation: after 5s alternate 1;
           
 
