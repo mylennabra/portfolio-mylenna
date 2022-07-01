@@ -128,7 +128,7 @@
 }
 
 .btn {
-  background-color: #160016;
+  background-color: transparent;
   border: none;
   color: #FFFFFF;
   border-radius: 100%;
@@ -251,13 +251,13 @@
   padding-top: 1vh;
   padding-bottom: 1vh;
   flex-direction: column;
-  background-color: #160016;
+  background-color: #be1ec7;
   border-radius: 15%;
   width: 6em;
   height: 6em;
 }
 .minhas-espc--block:hover {
-  background-color: #490049;
+  background-color: #d837e1;
   transition-duration: 0.5s;
 }
 .minhas-espc .esp-icon {
@@ -408,13 +408,13 @@
   font-size: 20px;
 }
 .contatos .form-container > .form-field-container .input {
-  border: 1px solid #160016;
+  border: 1px solid #be1ec7;
   border: 1px solid #d837e1;
   word-break: break-word;
   color: #ffffff;
   min-width: 90%;
   width: 100%;
-  background-color: #160016;
+  background-color: #be1ec7;
 }
 .contatos .form-container > .form-field-container .input:hover {
   border: 1px solid #fbe8fc;
@@ -483,11 +483,18 @@ body, button, input, optgroup, select, textarea {
   }
 }
 
-.navbar-brand {
-  background-color: #160016;
-  justify-content: space-between;
+.navbar {
+  background-color: unset !important;
+  justify-content: end;
   width: 100%;
-  border-bottom: solid black 3px;
+}
+
+#hamburguer-menu {
+  height: 100px;
+  width: 100px;
+  display: grid;
+  place-items: center;
+  gap: 1px;
 }
 
 .dropdown-divider {
@@ -520,7 +527,7 @@ body, button, input, optgroup, select, textarea {
   justify-content: space-around;
 }
 .contact-container .contact {
-  background-color: #160016;
+  background-color: #0d000d;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -532,40 +539,11 @@ body, button, input, optgroup, select, textarea {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
   transform: translatey(-4px);
-  background-color: #7c007c;
+  background-color: #e163e8;
 }
 .contact-container .contact-icon {
   width: 30px;
   height: 30px;
-}
-
-.themeButtons {
-  background-color: #be1ec7;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 3.6rem;
-  height: 1.8rem;
-  padding: 1px;
-  margin-right: 2vw;
-  margin-top: 1vh;
-  margin-bottom: 10px;
-  border-radius: 100px;
-  box-shadow: 1px 1px 2px black;
-}
-.themeButtons #themeButtonDark {
-  display: none;
-}
-.themeButtons #toggle {
-  background-color: #160016;
-  width: 1.4rem;
-  height: 1.4rem;
-  margin-left: 2px;
-  margin-right: 2px;
-  border-radius: 100px;
-  cursor: pointer;
-  transition-timing-function: ease-in;
-  transition-duration: 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,11 +2,11 @@
 @use '../sass/util/util' as *;
 @use '../sass/util/variables' as c;
 
-@forward 'components.scss/home';
-@forward 'components.scss/sobremim';
-@forward 'components.scss/minhasespc';
-@forward 'components.scss/meusprojetos';
-@forward 'components.scss/contatos';
+@forward 'components/home';
+@forward 'components/sobremim';
+@forward 'components/minhasespc';
+@forward 'components/meusprojetos';
+@forward 'components/contatos';
 
 *{
     margin: 0;
@@ -43,7 +43,7 @@ body, button, input, optgroup, select, textarea {
     border-radius: 50px 50px 0 0;
     .down-btn{
         path{
-            fill: c.$thrd-clr;
+            fill: c.$scnd-clr;
         }
         height: 90px;
         position: relative;
@@ -62,21 +62,29 @@ body, button, input, optgroup, select, textarea {
     }
 }
 
-.navbar-brand{
-    background-color: c.$primary-clr;
-    justify-content: space-between;
+.navbar{
+    background-color:unset!important;
+    justify-content: end;
     width: 100%;
-    border-bottom: solid darken(c.$primary-clr, 10%) 3px;
+}
+
+
+#hamburguer-menu{
+    height:100px;
+    width:100px;
+    @include center-grid();
+    //margin-right: 100px;
+    gap: 1px;
 }
 
 .dropdown-divider{
-    background-color: c.$thrd-clr !important;
+    background-color: c.$scnd-clr !important;
     margin: 0 !important;
 }
 
 .dropdown-content{
     background-color: c.$primary-clr !important;
-    border: solid 1px c.$thrd-clr;
+    border: solid 1px c.$scnd-clr;
     padding: 0 !important;
     margin-right: 1rem;
 }
@@ -100,7 +108,7 @@ body, button, input, optgroup, select, textarea {
             @include animation();
 
         }
-        background-color: c.$scnd-clr;
+        background-color: c.$bckgnd-clr;
         border-radius: 50%;
         width: 50px;
         height: 50px;
@@ -110,40 +118,6 @@ body, button, input, optgroup, select, textarea {
             width: 30px;
             height: 30px;
         }
-    }
-}
-
-
-
-.themeButtons{
-    background-color: c.$thrd-clr;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 3.6rem;
-    height: 1.8rem;
-    padding: 1px;
-    margin-right: 2vw;
-    margin-top:1vh;
-    margin-bottom: 10px;
-    border-radius: 100px;
-    box-shadow: 1px 1px 2px darken(c.$scnd-clr, 20%);
-
-    #themeButtonDark{
-        display: none;
-
-    }
-
-    #toggle{
-        background-color: c.$scnd-clr;
-        width: 1.4rem;
-        height: 1.4rem;
-        margin-left: 2px;
-        margin-right: 2px;
-        border-radius: 100px;
-        cursor: pointer;
-        transition-timing-function:ease-in;
-        transition-duration: 0.5s;
     }
 }
 
