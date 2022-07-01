@@ -21,33 +21,21 @@
   <body>
     
     <header class="">
-      <nav class="navbar is-fixed-top">
-        <!-- Navbar com icone a esquerda e menu a esquerda -->
-        <div class="navbar-brand">
-          <!-- Item da navbar com logo -->
-          <a class="navbar-item" href="#">
-            <img alt="Logo do site" src="/assets/style/imgs/code-icon.png" height="28">
-          </a>
-          
-          
+      <nav class="navbar is-transparent is-fixed-top">
           <!-- Item da navbar com menu -->
           <div id="menudanavbar" class="navbar-item dropdown">
-            <div class="themeButtons">
-              <label for="themeButtonDark" id="toggle"></label>
-              <input type="checkbox" id="themeButtonDark"></button>
-            </div>
             <!-- Acionador do menu -->
             <div class="dropdown-trigger">
-              <button class="btn icon is-large" id="hamburguer-menu" aria-haspopup="true" aria-controls="dropdown-menu">
-                  <i id="icon-hamburguer" class="fi fi-br-menu-burger"></i>
+              <button class="btn icon" id="hamburguer-menu" aria-haspopup="true" aria-controls="dropdown-menu">
+                <label for="icon-hamburguer" class="text btn">Índice</label>
+                <i id="icon-hamburguer" class="fi fi-br-menu-burger"></i>
               </button>
             </div>
             <!-- Itens da lista que ativará com o acionador -->
             <div class="dropdown-menu" id="dropdown-menu" role="menu">
               <div class="dropdown-content">
                 <a href="#home" class="dropdown-item">
-                  < />
-                  Home
+                  < /> Home
                 </a>
                 <hr class="dropdown-divider">
                 <a href="#sobre-mim" class="dropdown-item">
@@ -68,7 +56,6 @@
               </div>
             </div>
           </div>
-        </div>
       </nav>
     </header>
     
