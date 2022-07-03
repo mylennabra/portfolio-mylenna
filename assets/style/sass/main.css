@@ -536,9 +536,14 @@ body, button, input, optgroup, select, textarea {
 #hamburguer-menu {
   height: 100px;
   width: 100px;
-  display: grid;
-  place-items: center;
-  gap: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: space-between;
+}
+#hamburguer-menu:hover {
+  background-color: #160016;
 }
 
 .dropdown-divider {

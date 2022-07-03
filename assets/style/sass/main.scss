@@ -72,9 +72,15 @@ body, button, input, optgroup, select, textarea {
 #hamburguer-menu{
     height:100px;
     width:100px;
-    @include center-grid();
+    @include center-flex();
+    flex-direction: column;
     //margin-right: 100px;
-    gap: 1px;
+    
+    align-items:space-between;
+
+    &:hover{
+        background-color: c.$primary-clr;
+    }
 }
 
 .dropdown-divider{
