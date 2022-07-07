@@ -7,11 +7,8 @@
     <title>Portfólio | Mylenna</title>
     <!-- Princpipal css -->
     <link rel="stylesheet" href="/assets/style/main.css">
-    <!-- Flaticon -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'> 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap" rel="stylesheet">
     <!-- Bulma css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
@@ -23,16 +20,16 @@
     <header class="">
       <nav class="navbar is-transparent is-fixed-top">
           <!-- Item da navbar com menu -->
-          <div id="menudanavbar" class="navbar-item dropdown">
+          <div id="menudanavbar" class="navbar-item is-hoverable dropdown">
             <!-- Acionador do menu -->
             <div class="dropdown-trigger">
               <button class="btn icon" id="hamburguer-menu" aria-haspopup="true" aria-controls="dropdown-menu">
                 <label for="icon-hamburguer" class="text btn">Índice</label>
-                <i id="icon-hamburguer" class="fi fi-br-menu-burger"></i>
+                <img id="icon-hamburguer" src="/assets/style/imgs/down-arrow.svg">
               </button>
             </div>
             <!-- Itens da lista que ativará com o acionador -->
-            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-menu is-transparent" id="dropdown-menu" role="menu">
               <div class="dropdown-content">
                 <a href="#home" class="dropdown-item">
                   < /> Home
