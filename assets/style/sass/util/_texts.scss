@@ -43,7 +43,6 @@
 .text-container{
   max-width: 80%;
   margin-top: 5vh;
-  text-align: center;
   @extend .texto;
   
   & > h1{
@@ -51,13 +50,10 @@
       &::after{
           content: "";
           display: block;
-          width: 50%;
           height: 2px;
           margin: 0 auto;
           background-color: c.$scnd-clr;
-          animation: after 5s alternate 1;
-          
-
+          animation: after 5s linear 1;
 
           @keyframes after {
               from {
