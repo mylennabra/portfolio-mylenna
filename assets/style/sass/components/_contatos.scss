@@ -10,11 +10,11 @@
     .text-container{
         margin: 0 auto;
         & > h1{
-            @extend .title;
+            @extend ._title;
             color: c.$txt-clr;
         }
         & > h3{
-            @extend .text; 
+            @extend .texto; 
         }
     }
   
