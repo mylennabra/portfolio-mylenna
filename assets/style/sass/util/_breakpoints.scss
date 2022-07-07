@@ -45,17 +45,30 @@
 }
 
 @include for-size(desktop-up){
+
+    ._title, h1{
+        font-size:64px !important;
+    }
+    
+    .scnd-title, h2{
+        font-size:28px !important;
+    }
+    
+    .texto, h3{
+        font-size:24px !important;
+    }
+
+
     body{
         max-width:70vw;
         margin: auto !important;
     }
 
     .home{
-        height:100vh;
-        display:grid !important;
+        display:grid ;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 3fr 2fr;
-        .text-container{
+        .txt-container{
             grid-area: 1 / 1 / 2 / 2;
             align-self: end;
         }
@@ -76,17 +89,7 @@
                 height: 500px !important;
             }
         }
-        .down-btn-container{
-            position: absolute;
-            right: 30px;
-            top: 90vh;
-        }
-    }
 
-    .text-container{
-        &>h3{
-            font-size:1.5rem !important;
-        }
     }
 
     .minhas-espc--container{
@@ -99,26 +102,27 @@
 
 
     .sobre-mim{
-        &>.text-container{
-            max-width: 60%;
-        }
-        &-container{
-            max-width: auto;
-            margin-top: 5vh;
-            padding: 2vh;
-            display: grid;
-            column-gap: 1vh;
-            height:fit-content;
-            grid-template-columns: 1fr 1fr;
-        }
-        &-block{
-            display: flex;
-            flex-direction: column;
-            justify-content:flex-start;
-            border: 1px solid c.$scnd-clr;
-            border-radius: 0.5rem;
-            padding:2vh;
-        }
+ 
+        // &-container{
+        //     max-width: auto;
+        //     margin-top: 5vh;
+        //     padding: 2vh;
+        //     display: grid;
+        //     column-gap: 1vh;
+        //     height:fit-content;
+        //     grid-template-columns: 1fr 1fr;
+        // }
+        // &-block{
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content:flex-start;
+        //     border: 1px solid c.$scnd-clr;
+        //     border-radius: 0.5rem;
+        //     padding:2vh;
+        // }
+        // .down-btn-container{
+        //     top: 100vh;
+        // }
 
     }
 
