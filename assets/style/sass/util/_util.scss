@@ -11,7 +11,7 @@
     justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
-    padding-top: 7rem;
+    padding-top: 5rem;
 }
 
 @mixin center-grid{
@@ -23,5 +23,4 @@
     transition-duration: .3s;
     transition-timing-function: ease-out;
     transform: translatey(-4px);
-    background-color: lighten(c.$scnd-clr, 20%);
 }
