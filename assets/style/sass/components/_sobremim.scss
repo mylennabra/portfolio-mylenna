@@ -3,7 +3,6 @@
 @use '../util/variables' as c;
 
 .sobre-mim{
-    background-color: c.$primary-clr;
     @include flex-page();
     
     hr{

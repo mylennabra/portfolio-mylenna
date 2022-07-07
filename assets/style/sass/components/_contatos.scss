@@ -4,9 +4,9 @@
 
 
 .contatos{
-    background-color: c.$bckgnd-clr;
     @include flex-page();
     width: 100%;
+    height: fit-content !important;
     .text-container{
         margin: 0 auto;
         & > h1{
@@ -44,8 +44,7 @@
         margin: 0;
         height: 8vh;
         min-width: 100%;
-        @include center-grid();
-        background-color: c.$primary-clr; 
+        @include center-grid(); 
         border-radius:48px 48px 0 0;
         border-bottom: 2px solid lighten(c.$scnd-clr, 10%);
 
@@ -68,16 +67,15 @@
 
         .input{
             border: 1px solid c.$scnd-clr; 
-            border: 1px solid lighten(c.$scnd-clr, 10%); 
             word-break: break-word;
             color: c.$txt-clr;
             min-width: 90%;
             width:100%;
             
             &:hover{
-                border: 1px solid lighten(c.$scnd-clr, 50%);
+                border: 1px solid lighten(c.$scnd-clr, 40%);
             }
-            background-color: c.$scnd-clr;
+            background-color: c.$bckgnd-clr;
 
             &:last-child{
                 height: 12vh;

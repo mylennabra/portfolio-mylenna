@@ -45,9 +45,11 @@
 }
 
 @include for-size(desktop-up){
-    html{
-        height:500vh !important;
+    body{
+        max-width:70vw;
+        margin: auto !important;
     }
+
     .home{
         display:grid !important;
         grid-template-columns: 1fr 1fr;
@@ -101,7 +103,6 @@
             grid-template-columns: 1fr 1fr;
         }
         &-block{
-            //@include center-grid();
             display: flex;
             flex-direction: column;
             justify-content:flex-start;
@@ -113,7 +114,6 @@
     }
 
     .meus-projetos{
-        height:100vh !important;
         .projetos-container{
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr !important;
@@ -124,34 +124,6 @@
             }
         }
 
-    }
-    
-    .contatos{
-        display: grid !important;
-        place-items: start center;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4,1fr);
-        &>.text-container{
-            grid-area: 1 / 1 / 2 / 3;
-        }
-        &>.gif{
-            grid-area: 2 / 2 / 3 / 3;
-            display:block !important;
-        }
-        &>.form-container{
-            .input{
-                min-width: 200px;
-            }
-            grid-area: 2 / 1 / 4 / 2;
-            margin: 0 auto;
-        }
-        &>.contact-container{
-            grid-area: 3 / 2 / 4 / 3;
-            margin: 0 auto;
-        }
-        &>.down-btn-container{
-            grid-area: 4 / 1 / 5 / 3;
-        }
     }
 
 }

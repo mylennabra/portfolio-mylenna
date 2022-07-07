@@ -3,11 +3,10 @@
 @use '../util/variables' as c;
 
 .meus-projetos{
-    background-color: c.$primary-clr;
+    //background-color: c.$primary-clr;
     @include flex-page();
     justify-content:flex-start;
     box-sizing: border-box;
-    height: 200vh;
   
     .text-container{
         margin: 0 auto;
@@ -48,7 +47,7 @@
         border-radius: 10px;
         margin-bottom: 2vh;
         max-width:90%;
-        height: 60vh;
+        //height: 60vh;
         box-sizing: border-box;
         @include center-flex();
         justify-content:space-between;
