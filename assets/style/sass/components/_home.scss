@@ -4,6 +4,7 @@
 
 .home{
   @include flex-page();
+  height:100vh;
   
     .home-icon-container{
         width: 100%;
