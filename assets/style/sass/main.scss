@@ -4,7 +4,6 @@
 
 @forward 'components/home';
 @forward 'components/sobremim';
-@forward 'components/minhasespc';
 @forward 'components/meusprojetos';
 @forward 'components/contatos';
 
@@ -12,6 +11,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    //border: 1px solid red !important;
 }
 
 html{
@@ -36,9 +36,10 @@ body, button, input, optgroup, select, textarea {
 
 
 .down-btn-container{
-    @include center-flex();
-    align-items:flex-start;
-    border-radius: 50px 50px 0 0;
+    @include center-grid();
+    position: absolute;
+    right: 30px;
+    top: 90vh;
     .down-btn{
         path{
             fill: c.$scnd-clr;
@@ -103,6 +104,13 @@ body, button, input, optgroup, select, textarea {
     &:hover{
         background-color: lighten(c.$primary-clr, 2%) !important;
     }
+}
+
+.footer{
+    background-color: transparent !important;
+    @include center-grid();
+    height: 10vh !important;
+    padding: 0 !important;
 }
 
 .contact-container{
