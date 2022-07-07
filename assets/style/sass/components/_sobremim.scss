@@ -3,35 +3,100 @@
 @use '../util/variables' as c;
 
 .sobre-mim{
-    @include flex-page();
-    
-    hr{
-        margin: 15px auto;
-        width: 90%;
-        background-color: c.$scnd-bckgnd-clr;
+    width: 100% !important;
+    h1{
+        @extend ._title; 
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    h2{
+        @extend .scnd-title;
+        font-weight: bold;
+    }
+    h3{
+        @extend .texto; 
+        font-size:17px;
     }
 
-    .text-container{
-        margin: 0 auto;
-        & > h1{
-            @extend .scnd-title; 
-        }
-        & > h2{
-            font-weight: bold;
-        }
-        & > h3{
-            @extend .scnd-text; 
-            margin-top:1vh;
-        }
+    .cursos > a{
+        color: c.$txt-clr;
+        text-decoration: underline;
+        grid-area: 1 / 2 / 2 / 3;
+        
+    }
 
-        .cursos > a{
-            color: c.$txt-clr;
-            text-decoration: underline;
-            
-        }
+    #sobre-mim-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 4fr;
+        column-gap: 5vw;
+        width: 100%;
+        
+    }
+
+    .sobre-mim-apresentacao{
+        grid-area: 2 / 1 / 3 / 2;
     }
 
     .down-btn-container{
         margin-top:0;
+    }
+
+    .feramentas-container{
+        grid-area: 2 / 2 / 3 / 3; 
+        display: grid;
+        width: fit-content;
+        height: fit-content;
+        justify-content: center;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 3fr 1fr;
+        gap: 10px;
+
+        h1{
+            grid-area: 1 / 1 / 1 / 3; 
+        }
+        
+    }
+    
+    .ferramentas{
+
+        &--block {
+            & > h3{
+                color: transparent;
+                position: absolute;
+                @extend .texto;
+                font-size: 18px !important;
+                margin-bottom: 5px;
+            }
+            @include center-flex();
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            flex-direction: column;
+            background-color: c.$bckgnd-clr;
+            border-radius: 15%;
+            z-index: 5;
+            width: 6em;
+            height: 6em;
+            svg{
+                width: 60px;
+            }
+            &:hover{
+                h3{
+                    color: c.$txt-clr;
+                    display: block;
+                    position: relative;
+                    transition-duration: .5s;
+                }
+                background-color: lighten(c.$bckgnd-clr, 10%);
+                transition-duration: .5s;
+                svg{
+                    width: 40px;
+                    transition-duration: .2s;
+                }
+            }
+        }
+    }
+    .esp-icon{
+        fill: white;
+        margin-top: 5px;
     }
 }
