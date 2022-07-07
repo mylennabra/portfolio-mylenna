@@ -6,54 +6,38 @@
     //background-color: c.$primary-clr;
     @include flex-page();
     justify-content:flex-start;
-    box-sizing: border-box;
-  
-    .text-container{
-        margin: 0 auto;
-        padding-bottom: 1vh;
-        margin-top: 1vh;
-        border-bottom: 1px solid c.$scnd-clr;
-        &:first-child{
-            border-bottom: none;
-        }
-        & > h1{
-            @extend .scnd-title;
-        }
-        & > h2{
-            font-weight: bold;   
-        }
-        & > h3, time{
-            @extend .scnd-text; 
-        }
-
-        & > p{
-            color: c.$scnd-clr;
-        }
+    
+    h1{
+        @extend ._title;
     }
-
-    .projetos-container{
-        @include center-grid();
-        place-items: start center;
-        margin-top: 2vh;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 1;
-        height: fit-content;
+    h2{
+        font-weight: bold;   
     }
-
-    .projetos-block{
-        box-sizing: inherit;
-        background-color: c.$bckgnd-clr;
-        border: solid 1px c.$scnd-clr;
+    h3, time{
+        @extend .texto; 
+    }
+    
+    .project-card{
+        background-color: lighten(c.$bckgnd-clr, 10%);
         border-radius: 10px;
-        margin-bottom: 2vh;
-        max-width:90%;
-        //height: 60vh;
-        box-sizing: border-box;
-        @include center-flex();
-        justify-content:space-between;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        box-shadow: 0 0 10px darken(c.$bckgnd-clr, 50%);
+        @include center-grid();
+        img{
+            border-radius: 10px;
+        }   
+        h3{
+            position: absolute;
+        }
+
+        
     }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
 
     .cardcontent{
         background-color: c.$bckgnd-clr;
@@ -66,14 +50,7 @@
         justify-content:space-between;
     }
 
-    .img-container{
-        height: 20vh;
-    }
 
-    .img-projeto{
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-    }
 
     .divider{
         padding: 0;
@@ -83,7 +60,6 @@
     }
 
     .saibamais{
-        
         padding: 1vh;
     }
 }
