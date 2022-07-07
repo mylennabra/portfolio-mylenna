@@ -7,11 +7,9 @@
 }
 
 @mixin flex-page{
-    @include center-flex();
     justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
-    padding-top: 5rem;
 }
 
 @mixin center-grid{

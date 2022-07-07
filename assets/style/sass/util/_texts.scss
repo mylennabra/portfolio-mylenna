@@ -1,33 +1,46 @@
 @use '../util/util' as *;
 @use '../util/variables' as c;
 
-.texto{
-  color: c.$txt-clr;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight:bold;
-}
 
-.title{
+._title{
   color: c.$txt-clr;
   font-size:32px;
   font-weight: bold;
   margin-bottom: 3vh;
+  width: fit-content;
+  &::after{
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 0 auto;
+    background-color: c.$scnd-clr;
+    animation: after 5s linear 1;
+
+    @keyframes after {
+        from {
+            transform: scalex(.1);
+            transform-origin:bottom left;
+        }
+        to {
+            transform: scalex(1);
+            transform-origin:bottom left;
+        }
+    }
+}
 }
 
 .scnd-title{
-  color: c.$scnd-txt-clr;
-  @extend .title;
-}
-
-.text{
   color: c.$txt-clr;
-  font-size:16px;
-  font-weight: regular;
+  font-size:24px;
+  font-weight: bold;
+  width: fit-content;
+  font-size:28px;
 }
 
-.scnd-text{
+.texto{
+  font-family: 'Source Sans Pro', sans-serif;
   color: c.$scnd-txt-clr;
-  @extend .text;
+  font-size:16px;
 }
 
 .btn{
@@ -36,44 +49,21 @@
   color: c.$scnd-bckgnd-clr;
   border-radius: 100%;
   &:hover{
-      cursor: pointer;
+    cursor: pointer;
   }
 }
-
-.text-container{
-  max-width: 80%;
-  margin-top: 5vh;
-  @extend .texto;
   
-  & > h1{
-      @extend .title;
-      &::after{
-          content: "";
-          display: block;
-          height: 2px;
-          margin: 0 auto;
-          background-color: c.$scnd-clr;
-          animation: after 5s linear 1;
-
-          @keyframes after {
-              from {
-                  transform: scalex(.1);
-                  transform-origin:bottom left;
-              }
-              to {
-                  transform: scalex(1);
-                  transform-origin:bottom left;
-              }
-          }
-      }
+.txt{
+  h1{
+    @extend ._title;
   }
-  
-  & > h2{
-      @extend .text;
-      font-size: 24px;
+
+  h2{
+    @extend .scnd-title;
+    font-size: 24px;
   }
-  
-  & > h3{
-      @extend .text;
+
+  h3{
+    @extend .texto;
   }
 }
