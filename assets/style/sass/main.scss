@@ -16,16 +16,17 @@
 
 html{
     height: fit-content;
-    background: linear-gradient(326deg, #160016, #25002a, #26002f);
-    background-size: 600% 600%;
+    background-color: c.$primary-clr !important;
+    // background: linear-gradient(326deg, #160016, #210025, #1c0022);
+    // background-size: 600% 600%;
 
-    animation: AnimationName 5s ease infinite;
+    // animation: AnimationName 5s ease infinite;
 
-    @keyframes AnimationName {
-        0%{background-position:26% 0%}
-        50%{background-position:75% 100%}
-        100%{background-position:26% 0%}
-    }
+    // @keyframes AnimationName {
+    //     0%{background-position:26% 0%}
+    //     50%{background-position:75% 100%}
+    //     100%{background-position:26% 0%}
+    // }
 }
 
 body, button, input, optgroup, select, textarea {
@@ -64,23 +65,26 @@ body, button, input, optgroup, select, textarea {
 
 .navbar{
     background-color:unset!important;
-    justify-content: end;
     width: 100%;
+    justify-content: end !important;
+    align-items: stretch;
+    display: flex;
 }
-
 
 #hamburguer-menu{
     height:100px;
     width:100px;
     @include center-flex();
     flex-direction: column;
-    //margin-right: 100px;
-    
     align-items:space-between;
 
     &:hover{
         background-color: c.$primary-clr;
     }
+}
+
+#dropdown-menu{
+    transition-duration: 3s;
 }
 
 .dropdown-divider{
@@ -112,7 +116,7 @@ body, button, input, optgroup, select, textarea {
     .contact{
         &:hover{
             @include animation();
-
+            background-color: c.$scnd-clr;
         }
         background-color: c.$bckgnd-clr;
         border-radius: 50%;
