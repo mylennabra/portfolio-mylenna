@@ -3,8 +3,9 @@
 @use '../util/variables' as c;
 
 .home{
-  @include flex-page();
-  height:100vh;
+    @include flex-page();
+    height:100vh;
+    padding-top: 20vh;
   
     .home-icon-container{
         width: 100%;
