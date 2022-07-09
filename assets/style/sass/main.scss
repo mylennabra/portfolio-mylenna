@@ -38,6 +38,18 @@ body{
     margin: auto;
 }
 
+h1{
+    @extend ._title; 
+}
+h2{
+    @extend .scnd-title;
+    font-weight: bold;
+}
+h3{
+    @extend .texto; 
+    font-size:17px;
+}
+
 .down-btn-container{
     @include center-grid();
     position: absolute;
