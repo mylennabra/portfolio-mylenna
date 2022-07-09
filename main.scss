@@ -1,11 +1,12 @@
-@use '../sass/util/breakpoints';
-@use '../sass/util/util' as *;
-@use '../sass/util/variables' as c;
+@use 'assets/style/sass/util/breakpoints' as *;
+@use 'assets/style/sass/util/util' as *;
+@use 'assets/style/sass/util/variables' as c;
 
-@forward 'components/home';
-@forward 'components/sobremim';
-@forward 'components/meusprojetos';
-@forward 'components/contatos';
+@forward 'assets/style/sass/components/home';
+@forward 'assets/style/sass/components/sobremim';
+@forward 'assets/style/sass/components/meusprojetos';
+@forward 'assets/style/sass/components/contatos';
+
 
 *{
     margin: 0;
