@@ -14,26 +14,29 @@
     //border: 1px solid red !important;
 }
 
+b{
+    color: c.$scnd-clr;
+}
+
 html{
     height: fit-content;
     background-color: c.$primary-clr !important;
-    // background: linear-gradient(326deg, #160016, #210025, #1c0022);
-    // background-size: 600% 600%;
-
-    // animation: AnimationName 5s ease infinite;
-
-    // @keyframes AnimationName {
-    //     0%{background-position:26% 0%}
-    //     50%{background-position:75% 100%}
-    //     100%{background-position:26% 0%}
-    // }
 }
 
 body, button, input, optgroup, select, textarea {
     font-family: 'Source Sans Pro', sans-serif !important;
 }
 
+body{
+    max-width:90vw;
+    margin: 0 auto !important;
+    text-align: center;
+}
 
+._title, h1, .scnd-title, h2, .texto, h3{
+    text-align: center;
+    margin: auto;
+}
 
 .down-btn-container{
     @include center-grid();
