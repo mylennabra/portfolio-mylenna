@@ -485,6 +485,7 @@ h3 {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,9 +496,15 @@ h3 {
   transform: translatey(-4px);
   background-color: #be1ec7;
 }
-.contact-container .contact-icon {
-  width: 30px;
-  height: 30px;
+.contact-container .contact a {
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+}
+.contact-container .contact i {
+  font-size: 1.5rem;
+  justify-self: center;
 }
 
 /*# sourceMappingURL=main.css.map */
