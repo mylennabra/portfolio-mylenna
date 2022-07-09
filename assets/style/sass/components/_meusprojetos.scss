@@ -18,38 +18,66 @@
     }
     
     .project-card{
-        background-color: lighten(c.$bckgnd-clr, 10%);
         border-radius: 10px;
-        box-shadow: 0 0 10px darken(c.$bckgnd-clr, 50%);
+        height: calc(100% - 5px);
         @include center-grid();
-        img{
-            border-radius: 10px;
-        }   
-        h3{
-            position: absolute;
+
+        .links{
+            margin-top: 10px;
         }
 
+        img{
+            border-radius: 10px 10px 0 0;
+            opacity: 0.7;
+        }
+        
+        a{
+            font-size: 2rem;
+        }
+
+        svg{
+            fill: c.$txt-clr;
+            height: 2rem;
+            width: auto;
+        }
+        
+        .cardcontent{
+            padding: 50px;
+            visibility: hidden;
+            position: absolute;
+            @include center-grid();
+        }
+
+        &:hover{
+            box-shadow: 0 0 10px darken(c.$bckgnd-clr, 50%);
+            .cardcontent{
+                visibility:visible;
+            }
+            img{
+                opacity: 0.1;
+                transition-duration: .3s;
+            }
+        }
+
+        &::after{
+            content: "";
+            border-radius: 0 0 10px 10px;
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 5px;
+            z-index: 3;
+            background-color: c.$scnd-clr;
+        }    
         
     }
 
     .card-container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
+        margin-bottom: 10vh;
     }
-
-
-    .cardcontent{
-        background-color: c.$bckgnd-clr;
-        z-index: 3;
-        width: 100%;
-        max-height: 35vh;
-        border-radius: 0 0 10px 10px;
-        @include center-flex();
-        flex-direction: column;
-        justify-content:space-between;
-    }
-
 
 
     .divider{

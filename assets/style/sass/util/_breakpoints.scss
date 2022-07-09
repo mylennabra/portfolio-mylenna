@@ -149,6 +149,15 @@
     }
 
     .meus-projetos{
+        .project-card{
+            //min-height: 40vh;
+        }
+
+        .card-container{
+            margin-top:10vh;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        }
+        
         .projetos-container{
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr !important;
