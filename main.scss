@@ -55,32 +55,6 @@ h3{
     font-size:17px;
 }
 
-.down-btn-container{
-    @include center-grid();
-    position: absolute;
-    right: 30px;
-    top: 90vh;
-    .down-btn{
-        path{
-            fill: c.$scnd-clr;
-        }
-        height: 50px;
-        position: relative;
-        max-width: 50px;
-        animation: bounce 1s alternate infinite;
-
-
-        @keyframes bounce {
-            from {
-                transform: translatey(-10px);
-            }
-            to {
-                transform: translatey(0);
-            }
-        }
-    }
-}
-
 .navbar{
     background-color:unset!important;
     width: 100%;
@@ -89,9 +63,13 @@ h3{
     display: flex;
 }
 
-#hamburguer-menu{
-    height:100px;
-    width:100px;
+#menu{
+    background-color: c.$scnd-clr;
+    position: fixed;
+    height:50px;
+    width: 50px;
+    top: 10vh;
+    right: 0;
     @include center-flex();
     flex-direction: column;
     align-items:space-between;
@@ -114,7 +92,6 @@ h3{
     background-color: c.$primary-clr !important;
     border: solid 1px c.$scnd-clr;
     padding: 0 !important;
-    margin-right: 1rem;
 }
 
 .dropdown-item{
@@ -133,10 +110,15 @@ h3{
     padding: 0 !important;
 }
 
+
 .contact-container{
     @include center-flex();
-    justify-content:space-around;
+    margin: 10px auto;
+    width: fit-content;
     .contact{
+        &:nth-child(2), &:nth-child(3), &:nth-child(4){
+            margin-left: 10px;
+        }
         &:hover{
             @include animation();
             background-color: c.$scnd-clr;
@@ -145,7 +127,6 @@ h3{
         border-radius: 50%;
         width: 50px;
         height: 50px;
-        margin-right: 10px;
         @include center-flex();
         
         a{
@@ -158,7 +139,11 @@ h3{
             font-size: 1.5rem;
             justify-self: center;
         }
-    }
+        svg{
+            fill: c.$txt-clr;
+            height: 1.8rem;
+        }
+    }  
 }
 
 // @include for-size(desktop-up);
