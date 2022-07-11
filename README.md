@@ -1,6 +1,6 @@
 # Hey! 👋 | Bem vindo(a) ao meu portfólio!
 
-### - ACESSE <a href="https://mylennabra.github.io/portfolio-mylenna/">AQUI</a> 
+### - ACESSE <a href="">AQUI</a> 
 
 <hr>
 
