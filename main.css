@@ -415,6 +415,7 @@ h3 {
   position: fixed;
   height: 50px;
   width: 50px;
+  border-radius: 10px 0 0 10px;
   top: 10vh;
   right: 0;
   display: flex;
