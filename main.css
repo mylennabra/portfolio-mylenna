@@ -1,3 +1,52 @@
+@media (min-width: 280px) {
+  ._title, h1, .scnd-title, h2, .texto, h3 {
+    margin: 0 auto !important;
+  }
+
+  ._title, h1 {
+    font-size: 21px !important;
+  }
+
+  .scnd-title, h2 {
+    font-size: 14px !important;
+  }
+
+  .texto, h3, p {
+    font-size: 12px !important;
+  }
+
+  html {
+    min-width: 280px !important;
+    padding: 5px !important;
+  }
+
+  img {
+    max-width: 90% !important;
+  }
+
+  body {
+    max-width: 95vw !important;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+  }
+
+  .cardcontent {
+    padding: 0 !important;
+  }
+
+  .project-card::after {
+    max-width: 90% !important;
+  }
+
+  .links a {
+    font-size: 1rem !important;
+  }
+  .links svg {
+    height: 1rem !important;
+  }
+}
 @media (min-width: 1200px) {
   ._title, h1, .scnd-title, h2, .texto, h3 {
     text-align: left !important;
@@ -102,7 +151,7 @@
 }
 ._title, h1, .meus-projetos h1, .txt h1 {
   color: #ffffff;
-  font-size: 32px !important;
+  font-size: 32px;
   font-weight: bold;
   margin-bottom: 3vh;
   width: fit-content;

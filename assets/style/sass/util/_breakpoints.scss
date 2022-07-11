@@ -2,14 +2,19 @@
 @use '../util/variables' as c;
 
 @mixin for-size($range) {
+    $tiny-phone-upper-boundary: 280px;
     $phone-upper-boundary: 500px;
     $tablet-portrait-upper-boundary: 900px;
     $tablet-landscape-upper-boundary: 1200px;
     $desktop-upper-boundary: 1800px;
   
     @if $range == phone-only {
-      @media (max-width: #{$phone-upper-boundary - 1}) {
+      @media (min-width: #{$tiny-phone-upper-boundary}) {
           @content; 
+        }
+    } @else if $range == phone-normal {
+        @media (max-width: #{$phone-upper-boundary - 1}) {
+            @content; 
         }
     } @else if $range == tablet-portrait-up {
         @media (min-width: $phone-upper-boundary) {
@@ -33,6 +38,59 @@
 
 
 @include for-size(phone-only){
+    ._title, h1, .scnd-title, h2, .texto, h3{
+        margin: 0 auto !important;
+    }
+
+    ._title, h1{
+        font-size:21px !important;
+    }
+    
+    .scnd-title, h2{
+        font-size:14px !important;
+    }
+    
+    .texto, h3, p{
+        font-size:12px !important;
+    }
+
+    html{
+        min-width: 280px !important;
+        padding: 5px !important;
+    }
+
+    img{
+        max-width: 90% !important;
+    }
+
+    body{
+        max-width:95vw !important;
+    }
+
+    .card-container{
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+    }
+
+    .cardcontent{
+        padding: 0 !important;
+    }
+
+    .project-card::after{
+        max-width: 90% !important;
+    }
+
+    .links{
+        a{
+            font-size:1rem !important;
+        }
+        svg{
+            height:1rem !important;
+        }
+    }
+
+}
+
+@include for-size(phone-normal){
 
 }
 
