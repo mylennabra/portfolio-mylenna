@@ -1,6 +1,6 @@
 # Hey! 👋 | Bem vindo(a) ao meu portfólio!
 
-### - ACESSE <a href="mylenna.xyz">AQUI</a> 
+### - ACESSE <a href="http://mylenna.xyz">AQUI</a> 
 
 <hr>
 
