@@ -1,4 +1,4 @@
-@media (min-width: 280px) {
+@media (max-width: 299px) {
   ._title, h1, .scnd-title, h2, .texto, h3 {
     margin: 0 auto !important;
   }
