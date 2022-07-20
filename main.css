@@ -229,9 +229,11 @@
   width: 100% !important;
   min-height: 100vh;
 }
-.sobre-mim .cursos > a {
-  color: #ffffff;
-  text-decoration: underline;
+.sobre-mim .cursos > p > a {
+  color: #be1ec7 !important;
+}
+.sobre-mim .cursos > p > a:hover {
+  color: #d837e1 !important;
 }
 .sobre-mim-cards {
   margin: 8vh 0 8vh 0;
@@ -371,7 +373,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 4fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 10px;
 }
 .contatos input {
