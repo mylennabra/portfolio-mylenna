@@ -6,9 +6,11 @@
     width: 100% !important;
     min-height: 100vh;
 
-    .cursos > a{
-        color: c.$txt-clr;
-        text-decoration: underline;
+    .cursos > p > a{
+        color: c.$scnd-clr !important;
+        &:hover { 
+            color: lighten(c.$scnd-clr, 10%) !important;
+        }
     }
 
     &-cards{
